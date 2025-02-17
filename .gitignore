@@ -1,0 +1,5 @@
+# created by virtualenv automatically
+Scripts/
+Lib/
+CACHEDIR.TAG
+pyvenv.cfg
