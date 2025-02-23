@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,47 @@
     <link rel="stylesheet" href="{% static 'home/styles.css' %}">
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    <p>This is a basic HTML template.</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'terms' %}">Licence and Terms</a></li> 
+                <li><a href="{% url 'contact' %}">Contact Me</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <div class="center">
+    <div class="portfolio">
+        <h2 class="title">Hi! My name is Bruno Rian</h2>
+        <p class="description">I am a backend python developer</p>
+        <div class="portfolio-item">
+            <h3>Skills</h3>
+            <p>Experienced in building responsive and dynamic websites using HTML, CSS, JavaScript, and Django Backend, also optimizing python softwares using C bindings or dynamic libraries.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Database Management</h3>
+            <p>Skilled in designing and managing SQL databases using PostgreSQL, MySQL, and SQLite.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Linux</h3>
+            <p>Experience using Debian and Ubuntu operational systems and terminals.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Game Development</h3>
+            <p>I'm also in Game development for old systems, like nes and snes, using C and Assembly.</p>
+        <div class="portfolio-item">
+            <h3>Data-Science</h3>
+            <p> I also know data-science programming using Jupyter Notebooks with Python and Julia.<p>
+        </div>
+        <div class="portfolio-item">
+            <h2>Experience</h2>
+            <p>Proficient in server-side programming with Python, Django, and Web Server development.</p>
+        </div>
+        <div class="portfolio-item">
+            <h2>Projects</h2>
+            <p>For e.g. this website is made using Django, HTML, and CSS. Check it out on <a href="https://github.com/BrunoRNS/server">Github</a>.</p>
+            <p>Check my github account to see the most recent projects made by me. <a href="https://github.com/BrunoRNS/">Github</a>.</p>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
