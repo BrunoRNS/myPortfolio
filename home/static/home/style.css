@@ -1,0 +1,44 @@
+.page {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    background: linear-gradient(rgb(40, 40, 40), gray);
+}
+
+.dropbtn {
+    background-color: #23144b;
+    color: white;
+    font-size: 16px;
+    height: 32px;
+    width: 32px;
+    border: none;
+    cursor: pointer;
+}
+
+#dropdown-content {
+    padding: 5px;
+    max-width: 150px;
+    background-color: #23144b;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#btn-a {
+    color: rgb(168, 168, 168);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.center {
+    text-align: center;
+    top: 0;
+}

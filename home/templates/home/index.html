@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="icon" href="{% static 'home/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'home/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <script src="{% static 'home/script.js' %}"></script>
 </head>
 <body>
+    <div class="page">
     <header>
         <nav>
-            <ul>
-                <li><a href="{% url 'terms' %}">Licence and Terms</a></li> 
-                <li><a href="{% url 'contact' %}">Contact Me</a></li> 
-            </ul>
+            <button onclick="dropbox()" class="dropbtn">&equiv;</button>
+                <div id="dropdown-content" class="hidden">
+                    
+                    <a id="btn-a" href="{% url 'terms' %}">Licence and Terms</a><br/>
+                    <a id="btn-a" href="{% url 'contact' %}">Contact Me</a>
+                </div>
         </nav>
     </header>
     <div class="center">
+    <div class="pro-img"></div>
     <div class="portfolio">
         <h2 class="title">Hi! My name is Bruno Rian</h2>
         <p class="description">I am a backend python developer</p>
@@ -46,9 +51,12 @@
         </div>
         <div class="portfolio-item">
             <h2>Projects</h2>
-            <p>For e.g. this website is made using Django, HTML, and CSS. Check it out on <a href="https://github.com/BrunoRNS/server">Github</a>.</p>
+            <p>For e.g. this website is made using Django, HTML, CSS and JavaScript. <a href="https://github.com/BrunoRNS/server">Source code</a>.</p>
             <p>Check my github account to see the most recent projects made by me. <a href="https://github.com/BrunoRNS/">Github</a>.</p>
         </div>
+        <footer>
+            <p>© 2025 Bruno Rian</p>
+        </footer>
     </div>
     </div>
 </body>
