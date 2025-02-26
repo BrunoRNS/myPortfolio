@@ -6,6 +6,26 @@
     position: fixed;
     height: 100%;
     background: linear-gradient(rgb(40, 40, 40), gray);
+    
+}
+
+.half-width {
+    width: 50%; 
+}
+.full-width {
+    flex: 1; 
+}
+.col-no-margin-no-padding {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.navbar-style {
+    background-color: #23144b;
+    font-size: 16px;
+    height: 34px;
+    width: 100px;
+    border: none;
+    margin-left: 0;
 }
 
 .dropbtn {
@@ -14,13 +34,12 @@
     font-size: 16px;
     height: 32px;
     width: 32px;
-    border: none;
     cursor: pointer;
 }
 
 #dropdown-content {
     padding: 5px;
-    max-width: 150px;
+    max-width: 180px;
     background-color: #23144b;
     text-align: center;
     line-height: 1.5;
@@ -38,7 +57,10 @@
     display: block;
 }
 
-.center {
-    text-align: center;
-    top: 0;
+.pro-img {
+    float: center;
+}
+
+.portfolio {
+    float: right;
 }

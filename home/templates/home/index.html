@@ -7,22 +7,44 @@
     <title>Home Page</title>
     <link rel="icon" href="{% static 'home/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'home/style.css' %}">
-    <script src="{% static 'home/script.js' %}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="page">
+    <div class="container-fluid page ">
+    <div class="row ">
+    <div class="col-auto col-no-margin-no-padding">
+    <div class="p-3 mb-2 ">
     <header>
-        <nav>
-            <button onclick="dropbox()" class="dropbtn">&equiv;</button>
-                <div id="dropdown-content" class="hidden">
-                    
-                    <a id="btn-a" href="{% url 'terms' %}">Licence and Terms</a><br/>
-                    <a id="btn-a" href="{% url 'contact' %}">Contact Me</a>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-style">
+            <button class="navbar-toggler dropbtn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" id="dropdown-content">
+                            <a class="dropdown-item" id="btn-a" href="{% url 'terms' %}">Licence and Terms</a>
+                            <a class="dropdown-item" id="btn-a" href="{% url 'contact' %}">Contact Me</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <div class="center">
-    <div class="pro-img"></div>
+    </div>
+    </div>
+    <div class="col half-width ">
+    <div class="p-3 mb-2 ">
+    <img class="pro-img", alt="img provisoria"></div>
+    </div>
+    </div>
+    <div class="col full-width ">
+    <div class="p-3 mb-2 ">
     <div class="portfolio">
         <h2 class="title">Hi! My name is Bruno Rian</h2>
         <p class="description">I am a backend python developer</p>
@@ -51,12 +73,14 @@
         </div>
         <div class="portfolio-item">
             <h2>Projects</h2>
-            <p>For e.g. this website is made using Django, HTML, CSS and JavaScript. <a href="https://github.com/BrunoRNS/server">Source code</a>.</p>
+            <p>For e.g. this website is made using Django, HTML, CSS and Bootstrap. <a href="https://github.com/BrunoRNS/server">Source code</a>.</p>
             <p>Check my github account to see the most recent projects made by me. <a href="https://github.com/BrunoRNS/">Github</a>.</p>
         </div>
         <footer>
             <p>© 2025 Bruno Rian</p>
         </footer>
+    </div>
+    </div>
     </div>
     </div>
 </body>
