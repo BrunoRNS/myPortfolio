@@ -1,87 +1,90 @@
+<!-- I've commented all tags I thought useful for and the class of the </div> tag, for personal organization only :) -->
 <!DOCTYPE html>
-{% load static %}
+{% load static %} <!-- Loads the static template tag for serving static files in django apps -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
     <title>Home Page</title>
     <link rel="icon" href="{% static 'home/favicon.ico' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Links to the Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Links to the jQuery library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Links to the Bootstrap JS -->
     <link rel="stylesheet" href="{% static 'home/style.css' %}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container-fluid page ">
-    <div class="row ">
-    <div class="col-auto col-no-margin-no-padding">
-    <div class="p-3 mb-2 ">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-style">
-            <button class="navbar-toggler dropbtn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Menu
-                        </a>
-                        <div class="dropdown-menu" id="dropdown-content">
-                            <a class="dropdown-item" id="btn-a" href="{% url 'terms' %}">Licence and Terms</a>
-                            <a class="dropdown-item" id="btn-a" href="{% url 'contact' %}">Contact Me</a>
+    <div class="container-fluid page p-0 mb-0"> <!-- Container for the entire page with Bootstrap classes with no padding nor margin -->
+        <div class="row"> <!-- The unique Bootstrap row -->
+            <div class="col-6"> <!-- Bootstrap column -->
+                <div class="p-3 mb-2"> <!-- Padding and margin classes -->
+                    <img class="pro-img" alt="img provisoria"> <!-- Placeholder image -->
+                </div> <!-- Closing div for class p-3 mb-2 -->
+            </div> <!-- Closing div for class col -->
+            <div class="col-4"> <!-- Bootstrap column -->
+                <div class="p-3 mb-2"> <!-- Padding and margin classes -->
+                    <div class="portfolio"> <!-- Portfolio div -->
+                        <h2 class="title">Hi! My name is Bruno Rian</h2>
+                        <p class="description">I am a backend python developer</p>
+                        <div class="portfolio-item">
+                            <h3>Skills</h3>
+                            <p>Experienced in building responsive and dynamic websites using HTML, CSS, JavaScript, and Django Backend, also optimizing python softwares using C bindings or dynamic libraries.</p>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    </div>
-    </div>
-    <div class="col half-width ">
-    <div class="p-3 mb-2 ">
-    <img class="pro-img", alt="img provisoria"></div>
-    </div>
-    </div>
-    <div class="col full-width ">
-    <div class="p-3 mb-2 ">
-    <div class="portfolio">
-        <h2 class="title">Hi! My name is Bruno Rian</h2>
-        <p class="description">I am a backend python developer</p>
-        <div class="portfolio-item">
-            <h3>Skills</h3>
-            <p>Experienced in building responsive and dynamic websites using HTML, CSS, JavaScript, and Django Backend, also optimizing python softwares using C bindings or dynamic libraries.</p>
-        </div>
-        <div class="portfolio-item">
-            <h3>Database Management</h3>
-            <p>Skilled in designing and managing SQL databases using PostgreSQL, MySQL, and SQLite.</p>
-        </div>
-        <div class="portfolio-item">
-            <h3>Linux</h3>
-            <p>Experience using Debian and Ubuntu operational systems and terminals.</p>
-        </div>
-        <div class="portfolio-item">
-            <h3>Game Development</h3>
-            <p>I'm also in Game development for old systems, like nes and snes, using C and Assembly.</p>
-        <div class="portfolio-item">
-            <h3>Data-Science</h3>
-            <p> I also know data-science programming using Jupyter Notebooks with Python and Julia.<p>
-        </div>
-        <div class="portfolio-item">
-            <h2>Experience</h2>
-            <p>Proficient in server-side programming with Python, Django, and Web Server development.</p>
-        </div>
-        <div class="portfolio-item">
-            <h2>Projects</h2>
-            <p>For e.g. this website is made using Django, HTML, CSS and Bootstrap. <a href="https://github.com/BrunoRNS/server">Source code</a>.</p>
-            <p>Check my github account to see the most recent projects made by me. <a href="https://github.com/BrunoRNS/">Github</a>.</p>
-        </div>
-        <footer>
-            <p>© 2025 Bruno Rian</p>
-        </footer>
-    </div>
-    </div>
-    </div>
-    </div>
+                        <div class="portfolio-item">
+                            <h3>Database Management</h3>
+                            <p>Skilled in designing and managing SQL databases using PostgreSQL, MySQL, and SQLite.</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <h3>Linux</h3>
+                            <p>Experience using Debian and Ubuntu operational systems and terminals.</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <h3>Game Development</h3>
+                            <p>I'm also in Game development for old systems, like nes and snes, using C and Assembly.</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <h3>Data-Science</h3>
+                            <p>I also know data-science programming using Jupyter Notebooks with Python and Julia.</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <h2>Experience</h2>
+                            <p>Proficient in server-side programming with Python, Django, and Web Server development.</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <h2>Projects</h2>
+                            <p>For e.g. this website is made using Django, HTML, CSS and Bootstrap. <a href="https://github.com/BrunoRNS/server">Source code</a>.</p>
+                            <p>Check my github account to see the most recent projects made by me. <a href="https://github.com/BrunoRNS/">Github</a>.</p>
+                        </div>
+                        <footer>
+                            <p>© 2025 Bruno Rian</p>
+                        </footer>
+                    </div> <!-- Closing div for class portfolio -->
+                </div> <!-- Closing div for class p-3 mb-2 -->
+            </div> <!-- Closing div for class col -->
+            <div class="col-2"> <!-- Bootstrap column with auto width -->
+                <div class="p-0 mb-0"> <!-- Setting padding and margin to 0 -->
+                    <header>
+                        <nav class="navbar navbar-expand-lg navbar-style"> <!-- Bootstrap navbar -->
+                            <button class="navbar-toggler dropbtn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span> <!-- Navbar toggle button for mobile view -->
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown"> <!-- Collapsible part of the navbar -->
+                                <ul class="navbar-nav"> <!-- Navbar items -->
+                                    <li class="nav-item dropdown"> <!-- Dropdown menu item -->
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            &equiv; <!-- Unicode for the hamburger icon -->
+                                        </a>
+                                        <div class="dropdown-menu" id="dropdown-content"> <!-- Dropdown menu content -->
+                                            <a class="dropdown-item" id="btn-a" href="{% url 'terms' %}">Licence and Terms</a> <!-- Link to terms page -->
+                                            <a class="dropdown-item" id="btn-a" href="{% url 'contact' %}">Contact Me</a> <!-- Link to contact page -->
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </header>
+                </div> <!-- Closing div for class p-0 mb-0 -->
+            </div> <!-- Closing div for class col-auto -->
+        </div> <!-- Closing div for class row -->
+    </div> <!-- Closing div for class container-fluid page p-0 mb-0 -->
 </body>
 </html>
