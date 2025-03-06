@@ -13,16 +13,17 @@
     background-color: #23144b;
     font-size: 30px;
     height: 32px;
-    width: 32px;
     border: none;
     margin-right: 0;
-    float: right;
+    position: relative;
+    top: 0;
+    right: 0;
 }
 
 .dropbtn {
     background-color: #23144b;
     color: white;
-    font-size: 30px;
+    font-size: 22px;
     height: 32px;
     width: 32px;
     cursor: pointer;
@@ -43,6 +44,11 @@
 #btn-a {
     color: rgb(168, 168, 168);
 }
+
+#btn-b {
+    color: rgb(168, 168, 168);
+}
+
 
 .pro-img {
     float: center;
