@@ -1,0 +1,29 @@
+.drop_down {
+    background-color: $dark-purple;
+    line-height: 1.5;
+    font-size: 22px;
+    border: none;
+    right: 0;
+    top: 0;
+}
+
+.drop_down_navbar {
+    @extend .drop_down;
+    position: relative;
+    margin-right: 0;
+    height: 32px;
+}
+
+.drop_down_button {
+    @extend .drop_down;
+    cursor: pointer;
+    color: white;
+    height: 32px;
+    width: 32px;
+}
+
+.drop_down_options {
+    @extend .drop_down;
+    text-align: center;
+    max-width: 180px;
+}

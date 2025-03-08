@@ -1,0 +1,14 @@
+$dark-purple: #23144b;
+$light-purple: #3a1f7b;
+
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.fullscreen_page {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    height: 100%;  
+}
