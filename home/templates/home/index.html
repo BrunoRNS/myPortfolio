@@ -5,13 +5,11 @@
 <head>
     {% include 'global/header_tags.html' %}
     {% include 'global/inc_bootstrap.html' %}
-    {% compress css %}
     <link rel="stylesheet" href="{% static 'global/global.scss.css' %}" type="text/x-sass">
     <link rel="stylesheet" href="{% static 'home/page.scss' %}" type="text/x-sass">
     <link rel="stylesheet" href="{% static 'home/col_img.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'home/col_portfolio.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'home/col_dropbtn.scss' %}" type="text/x-sass">
-    {% endcompress %}
     <link rel="icon" href="{% static 'global/favicon.ico' %}">
     <title>Home</title>
 </head>
