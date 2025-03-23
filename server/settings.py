@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +29,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-MY_APPS = ["home"]
+MY_APPS = ["home", "style_compressor"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'compressor',
     *MY_APPS,
 ]
 
@@ -128,35 +126,9 @@ STATICFILES_DIRS = [
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
 )
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Compressor Settings
-
-COMPRESS_ROOT = BASE_DIR / 'compressed'
-
-# Compile Sass files
-
-# Credits for https://stackoverflow.com/users/484127/tutudajuju for the SCSS_CMD
-###
-SCSS_CMD = '{python} -mscss -A "{image_output_path}" -a "{static_url}" ' \
-    '-S "{static_root}" -o "{{outfile}}" "{{infile}}"'.format(
-        python=sys.executable,
-        image_output_path=COMPRESS_ROOT,
-        static_url=STATIC_URL,
-        static_root=STATICFILES_DIRS[0]
-    )
-
-COMPRESS_PRECOMPILERS = (
-    ('text/x-sass', SCSS_CMD),
-)
-###
-
-# If DEBUG is True, then COMPRESS_ENABLED will be True
-# Else if DEBUG is False, then COMPRESS_ENABLED will be False
-COMPRESS_ENABLED = DEBUG
