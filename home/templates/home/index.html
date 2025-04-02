@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 {% load static %}
-{% load compress %}
+{% load link_stylesheets %}
 <html lang="en">
 <head>
     {% include 'global/header_tags.html' %}
     {% include 'global/inc_bootstrap.html' %}
-    <link rel="stylesheet" href="{% static 'global/global.scss.css' %}" type="text/x-sass">
-    <link rel="stylesheet" href="{% static 'home/page.scss' %}" type="text/x-sass">
-    <link rel="stylesheet" href="{% static 'home/col_img.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'home/col_portfolio.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'home/col_dropbtn.scss' %}" type="text/x-sass">
+    {% load_stylesheets css_files scss_files %}
     <link rel="icon" href="{% static 'global/favicon.ico' %}">
     <title>Home</title>
 </head>
