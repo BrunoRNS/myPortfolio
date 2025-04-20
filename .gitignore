@@ -1,9 +1,10 @@
 # created by virtualenv automatically
-Scripts/
-Lib/
+bin/
+lib/
 CACHEDIR.TAG
 pyvenv.cfg
 db.sqlite3
 __pycache__/
 .vscode/
 compressed/
+.env

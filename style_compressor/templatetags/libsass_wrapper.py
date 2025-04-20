@@ -1,6 +1,6 @@
-# This file is a wrapper for the libsass library. It compiles scss files to css files in compressed format.
+# This file is a wrapper for the pyscss library. It compiles scss files to css files in compressed format.
 from pathlib import Path
-import sass
+from scss import Compiler
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -10,4 +10,4 @@ def compile_scss(scss_file_content: str) -> str:
    """
    This function compiles a scss string to css in compressed format.
    """
-   return sass.compile(string=scss_file_content, output_style='compressed')
+   return str(Compiler().compile_string(string=scss_file_content))
