@@ -1,4 +1,4 @@
-from style_compressor.templatetags.libsass_wrapper import compile_scss
+from style_compressor.templatetags.pyscss_wrapper import compile_scss
 from pathlib import Path
 
 def compile_scss_file_to_css_string(scss_file: Path) -> str:
