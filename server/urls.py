@@ -21,7 +21,7 @@ from django.urls import path
 from home.views import home, terms, info
 
 urlpatterns = [
-    path('', home, name="home"),
-    path('info/', info, name="info"),
-    path('terms/', terms, name="terms"),
+    path('', home.home, name="home"),
+    path('terms/', terms.terms, name="terms"),
+    path('info/', info.info, name="info"),
 ]

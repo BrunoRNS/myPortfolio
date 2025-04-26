@@ -5,16 +5,16 @@
 <head>
     {% include 'global/header_tags.html' %}
     {% include 'global/inc_bootstrap.html' %}
-    {% load_stylesheets css_files scss_files %}
+    <link rel="stylesheet" href={% load_stylesheets stylesheet %}>
     <link rel="icon" href="{% static 'global/favicon.ico' %}">
     <title>Home</title>
 </head>
 <body>
     <div class="container-fluid page p-0 mb-0">
         <div class="row">
-            {% include 'home/col_img.html' %}
-            {% include 'home/col_portfolio.html' %}
-            {% include 'home/col_dropbtn.html' %}
+            {% include 'home/navbar.html' %}
+            {% include 'home/home/col_img.html' %}
+            {% include 'home/home/col_portfolio.html' %}
         </div>
     </div>
 </body>

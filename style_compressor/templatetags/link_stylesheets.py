@@ -45,13 +45,28 @@ def unite_files(template_name: str, files: list[str]) -> Path:
     return SCSS_DIR / f"{template_name}.scss" if scss else CSS_DIR / f"{template_name}.css"
 
 @register.simple_tag
-def load_stylesheets(template_name: str, css_files: list[str], scss_files: list[str]) -> str:
+def load_stylesheets(stylesheet: dict[str: list[str]]) -> str:
     """
     This function compresses all the css and scss files in the list in only one file for the app.\n
-    The first argument of the list is the name of the template which is using the stylesheet files.\n
-    The rest of the list receive the relative dir of the stylesheet files.\n
+    It receives a dictionary with the keys 'css_files', 'scss_files' and 'template_name'.\n
+    The values of the keys are lists of strings with the paths of the files.\n
+    The paths of the files are relative to the app's static directory.\n
     The files will be searched in the app's static directory and the global one.\n
     """
+    
+    if not isinstance(stylesheet, dict):
+        raise ValueError("The stylesheet parameter must be a dictionary.")
+
+    css_files: list[str] = stylesheet['css_files']
+    scss_files: list[str] = stylesheet['scss_files']
+    template_name: str = stylesheet['template_name'][0]
+
+    if not css_files and not scss_files :
+        raise ValueError("No CSS or SCSS files provided in the stylesheet dictionary.")
+    
+    if not template_name:
+        raise ValueError("No template name provided in the stylesheet dictionary.")
+
     css_united_file: Path = unite_files(template_name, scss_files)
     scss_united_file: Path = unite_files(template_name, css_files)
 
