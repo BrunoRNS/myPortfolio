@@ -1,10 +1,40 @@
-# created by virtualenv automatically
+# Ignore compiled binary files
 bin/
+
+# Ignore library files
 lib/
+
+# Ignore cache directory tag files
 CACHEDIR.TAG
+
+# Ignore Python virtual environment configuration file
 pyvenv.cfg
+
+# Ignore SQLite database file
 db.sqlite3
+
+# Ignore Python bytecode cache directories and files
 __pycache__/
+*.pyc
+
+# Ignore cython compiled files
+*.c
+*.cpp
+*.h
+*.pyd
+*.so
+dist/
+
+# Ignore Visual Studio Code workspace settings
 .vscode/
+
+# Ignore compressed files or directories
 compressed/
+
+# Ignore environment variable files
 .env
+
+# Additional common ignores
+*.log          # Log files
+*.tmp          # Temporary files
+*.swp          # Swap files created by text editors
