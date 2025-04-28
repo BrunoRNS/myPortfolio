@@ -35,6 +35,10 @@ compressed/
 .env
 
 # Additional common ignores
-*.log          # Log files
+
+# Log files
+.log
+*.log
+
 *.tmp          # Temporary files
 *.swp          # Swap files created by text editors
