@@ -25,5 +25,5 @@ urllib3==2.4.0
 urwid==2.6.16
 wcwidth==0.2.13
 websocket-client==1.8.0
-wheel==0.32.3
+wheel==0.38.1
 wsproto==1.2.0
