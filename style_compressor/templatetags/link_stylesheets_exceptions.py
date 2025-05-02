@@ -33,6 +33,10 @@ class LinkStylesheetsException(Exception, ABC):
 
 ### Missing files errors
 
+class ValidationError(LinkStylesheetsException):
+    """Exception raised when the stylesheet dictionary is invalid."""
+    def __init__(self, message: str = "Invalid stylesheet dictionary.", description: str = "", *args: object, **kwargs: object):
+        raise Exception(self.__make_message__(message, description), *args, **kwargs)
 
 class MissedscssException(LinkStylesheetsException):
     """Exception raised when missed scss files in the stylesheet dictionary."""
