@@ -35,10 +35,8 @@ Including another URLconf
 # from django.contrib import admin
 
 from django.urls import path
-from home.views import home, terms, info
+from home.views import home
 
 urlpatterns = [
     path('', home.home, name="home"),
-    path('terms/', terms.terms, name="terms"),
-    path('info/', info.info, name="info"),
 ]

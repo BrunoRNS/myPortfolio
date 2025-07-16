@@ -42,3 +42,6 @@ compressed/
 
 *.tmp          # Temporary files
 *.swp          # Swap files created by text editors
+
+# Virtual Environment Files
+venv/

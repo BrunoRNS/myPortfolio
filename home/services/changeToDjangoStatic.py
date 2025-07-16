@@ -15,9 +15,16 @@ You should have received a copy of the GNU General Public License along with thi
 If not, see <http://www.gnu.org/licenses/>.
 """
 
-from django.shortcuts import render
+from pathlib import Path
+import re
 
-# Home Page
-def home(request):
+pathToIndex = Path(__file__).parent.parent / "templates" / "index.html"
 
-    return render(request, 'index.html')
+with open(pathToIndex, 'r', encoding='utf-8') as file:
+    content = file.read()
+
+content = re.sub(r'/static/(.+?)"', r"{% static '\1' %}\"", content)
+content = content.replace('/favicon.png', '{% static \'favicon.png\' %}')
+
+with open(pathToIndex, 'w', encoding='utf-8') as file:
+    file.write(content)

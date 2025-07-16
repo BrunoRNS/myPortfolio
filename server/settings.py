@@ -45,7 +45,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-MY_APPS = ["home", "style_compressor"]
+MY_APPS = ["home"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -134,10 +134,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    BASE_DIR / 'global' / 'static',
-]
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
