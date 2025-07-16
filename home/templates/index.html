@@ -23,55 +23,19 @@ If not, see <http://www.gnu.org/licenses/>.
         <meta charset="utf-8" />
         <link rel="icon" href="{% static 'favicon.png' %}" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="Portfolio Website" />
+        <meta name="description" content="Bruno RNS - Porfolio" />
         <link rel="apple-touch-icon" href="{% static 'favicon.png' %}" />
         <link rel="manifest" href="{% static 'manifest.json' %}" />
-        <meta
-            name="description"
-            content="Use Developer Portfolio and create your own personalised portfolio today! With multiple themes to choose from, our easily customisable, user friendly website is designed to cater to developers and freelancers alike."
-        />
-        <meta property="og:image" content="Developer Portfolio" />
-        <meta property="og:site_name" content="Developer Portfolio" />
-        <meta property="og:title" content="Developer Portfolio" />
-        <meta property="og:url" content="https://dev-portfolio-template.netlify.app/" />
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:description"
-            content="Use Developer Portfolio and create your own personalised portfolio today! With multiple themes to choose from, our easily customisable, user friendly website is designed to cater to developers and freelancers alike."
-        />
-        <meta itemprop="name" content="Developer Portfolio" />
-        <meta itemprop="url" content="https://dev-portfolio-template.netlify.app/" />
-        <meta
-            itemprop="description"
-            content="Use Developer Portfolio and create your own personalised portfolio today! With multiple themes to choose from, our easily customisable, user friendly website is designed to cater to developers and freelancers alike."
-        />
-        <meta itemprop="thumbnailUrl" content="" />
-        <meta name="twitter:url" content="https://dev-portfolio-template.netlify.app/" />
-        <meta name="twitter:title" content="Developer Portfolio" />
-        <meta
-            name="twitter:description"
-            content="Use Developer Portfolio and create your own personalised portfolio today! With multiple themes to choose from, our easily customisable, user friendly website is designed to cater to developers and freelancers alike."
-        />
-        <meta name="twitter:card" content="summary" />
-        <title>Jane Doe - Porfolio</title>
-        <link href="{% static 'css/2.19627560.chunk.css' %}\" rel="stylesheet" />
-        <link href="{% static 'css/main.d276d4c9.chunk.css' %}\" rel="stylesheet" />
-        {% include 'includecss.csshtml' %}
+        <title>Bruno RNS - Porfolio</title>
+        <link href="{% static 'css/charset.css' %}\" rel="stylesheet" />
+        <link href="{% static 'css/main.css' %}\" rel="stylesheet" />
+        {% include 'includecss.html' %}
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root">
             <div class="app">
                 <div>
-                    <div class="navbar">
-                        <div class="navbar--container">
-                            <h1 style="color: rgb(33, 33, 33);">Jane Doe</h1>
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="jss1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M64 384h384v-42.67H64zm0-106.67h384v-42.66H64zM64 128v42.67h384V128z"></path>
-                            </svg>
-                        </div>
-                    </div>
                     <div class="landing">
                         <div class="landing--container">
                             <div class="landing--container-left" style="background-color: rgb(245, 101, 57);">
@@ -173,9 +137,6 @@ If not, see <http://www.gnu.org/licenses/>.
                                         hoped she was prepared.
                                     </p>
                                     <div class="lcr-buttonContainer">
-                                        <a href="{% static 'media/resume.bc382d73.pdf' %}\" download="resume" target="_blank" rel="noreferrer">
-                                            <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss7" tabindex="0" type="button"><span class="MuiButton-label">Download CV</span><span class="MuiTouchRipple-root"></span></button>
-                                        </a>
                                         <a spy="true" duration="2000" href="/#contacts">
                                             <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss8" tabindex="0" type="button"><span class="MuiButton-label">Contact</span><span class="MuiTouchRipple-root"></span></button>
                                         </a>
@@ -201,38 +162,6 @@ If not, see <http://www.gnu.org/licenses/>.
                                 </p>
                             </div>
                             <div class="about-img"><img src="{% static 'media/orangeTheme-girl.d0ad58be.svg' %}\" alt="" /></div>
-                        </div>
-                    </div>
-                    <div class="education" id="resume" style="background-color: rgb(33, 33, 33);">
-                        <div class="education-body">
-                            <div class="education-description">
-                                <h1 style="color: rgb(245, 101, 57);">Education</h1>
-                                <div class="react-reveal education-card jss9">
-                                    <div class="educard-img" style="background-color: rgb(245, 101, 57);"><img src="{% static 'media/eduImgWhite.ae822784.svg' %}\" alt="" /></div>
-                                    <div class="education-details">
-                                        <h6 style="color: rgb(245, 101, 57);">2007-2015</h6>
-                                        <h4 style="color: rgb(234, 234, 234);">Higher Secondary Education</h4>
-                                        <h5 style="color: rgba(234, 234, 234, 0.8);">Marble Hills Middle School</h5>
-                                    </div>
-                                </div>
-                                <div class="react-reveal education-card jss10">
-                                    <div class="educard-img" style="background-color: rgb(245, 101, 57);"><img src="{% static 'media/eduImgWhite.ae822784.svg' %}\" alt="" /></div>
-                                    <div class="education-details">
-                                        <h6 style="color: rgb(245, 101, 57);">2015-2019</h6>
-                                        <h4 style="color: rgb(234, 234, 234);">Bachelor of Technology</h4>
-                                        <h5 style="color: rgba(234, 234, 234, 0.8);">Somerset School of Science</h5>
-                                    </div>
-                                </div>
-                                <div class="react-reveal education-card jss11">
-                                    <div class="educard-img" style="background-color: rgb(245, 101, 57);"><img src="{% static 'media/eduImgWhite.ae822784.svg' %}\" alt="" /></div>
-                                    <div class="education-details">
-                                        <h6 style="color: rgb(245, 101, 57);">2019-Present</h6>
-                                        <h4 style="color: rgb(234, 234, 234);">Master of Technology</h4>
-                                        <h5 style="color: rgba(234, 234, 234, 0.8);">Hawking University, Cambridge</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="education-image"><img src="{% static 'media/eduOrange.c61dcfc3.svg' %}\" alt="" /></div>
                         </div>
                     </div>
                     <div class="skills" style="background-color: rgb(33, 33, 33);">
@@ -312,54 +241,23 @@ If not, see <http://www.gnu.org/licenses/>.
                             </div>
                         </div>
                     </div>
-                    <div class="experience" id="experience" style="background-color: rgb(33, 33, 33);">
-                        <div class="experience-body">
-                            <div class="experience-image"><img src="{% static 'media/expOrange.9383b2df.svg' %}\" alt="" /></div>
-                            <div class="experience-description">
-                                <h1 style="color: rgb(245, 101, 57);">Experience</h1>
-                                <div class="react-reveal experience-card jss12">
-                                    <div class="expcard-img" style="background-color: rgb(245, 101, 57);"><img src="{% static 'media/expImgWhite.0b896d9c.svg' %}\" alt="" /></div>
-                                    <div class="experience-details">
-                                        <h6 style="color: rgb(245, 101, 57);">2018-2019</h6>
-                                        <h4 style="color: rgb(234, 234, 234);">Frontend Developer</h4>
-                                        <h5 style="color: rgba(234, 234, 234, 0.8);">Globex Corporation</h5>
-                                    </div>
-                                </div>
-                                <div class="react-reveal experience-card jss13">
-                                    <div class="expcard-img" style="background-color: rgb(245, 101, 57);"><img src="{% static 'media/expImgWhite.0b896d9c.svg' %}\" alt="" /></div>
-                                    <div class="experience-details">
-                                        <h6 style="color: rgb(245, 101, 57);">2019-2020</h6>
-                                        <h4 style="color: rgb(234, 234, 234);">Backend Developer</h4>
-                                        <h5 style="color: rgba(234, 234, 234, 0.8);">Vehement Capital Partners</h5>
-                                    </div>
-                                </div>
-                                <div class="react-reveal experience-card jss14">
-                                    <div class="expcard-img" style="background-color: rgb(245, 101, 57);"><img src="{% static 'media/expImgWhite.0b896d9c.svg' %}\" alt="" /></div>
-                                    <div class="experience-details">
-                                        <h6 style="color: rgb(245, 101, 57);">2020-Present</h6>
-                                        <h4 style="color: rgb(234, 234, 234);">Marketing</h4>
-                                        <h5 style="color: rgba(234, 234, 234, 0.8);">Wonka Industries</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="projects" id="projects" style="background-color: rgb(33, 33, 33);">
                         <div class="projects--header"><h1 style="color: rgb(245, 101, 57);">Projects</h1></div>
-                        <div class="projects--body">
-                            <div class="projects--bodyContainer">
-                                <div class="react-reveal singleProject" style="background-color: rgb(255, 118, 77);">
-                                    <div class="projectContent">
-                                        <h2 style="color: rgb(234, 234, 234);">Employee Management</h2>
-                                        <img src="{% static 'media/one.a3146128.svg' %}\" alt="Employee Management" />
+                            <div class="projects--body">
+                                <div class="projects--bodyContainer">
+                                    {% for project in projects|slice:":3" %}
+                                        <div class="react-reveal singleProject" style="background-color: rgb(255, 118, 77);">
+                                        <div class="projectContent">
+                                        <h2 style="color: rgb(234, 234, 234);">{{ project.title }}</h2>
+                                        <img src="{% static 'media/' %}{% cycle 'one.a3146128.svg' 'two.721a0672.svg' 'three.d4f751d1.svg' %}" alt="{{ project.title }}" />
                                         <div class="project--showcaseBtn">
-                                            <a href="https://github.com/hhhrrrttt222111/developer-portfolio" target="_blank" rel="noreferrer" class="jss17">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="jss18" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <a href="{{ project.demo_url }}" target="_blank" rel="noreferrer" class="jss{% cycle '17' '19' '21' %}">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="jss{% cycle '18' '20' '22' %}" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
                                                 </svg>
                                             </a>
-                                            <a href="https://github.com/hhhrrrttt222111/developer-portfolio" target="_blank" rel="noreferrer" class="jss17">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="jss18" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <a href="{{ project.github_url }}" target="_blank" rel="noreferrer" class="jss{% cycle '17' '19' '21' %}">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="jss{% cycle '18' '20' '22' %}" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"
                                                     ></path>
@@ -367,143 +265,27 @@ If not, see <http://www.gnu.org/licenses/>.
                                             </a>
                                         </div>
                                     </div>
-                                    <p class="project--desc" style="background: rgb(33, 33, 33); color: rgb(234, 234, 234);">This project aims to build an employee management system that consolidates all information of a company</p>
-                                    <div class="project--lang" style="background: rgb(33, 33, 33); color: rgba(234, 234, 234, 0.8);"><span>React</span><span>CSS</span><span>Material Ui</span></div>
-                                </div>
-                                <div class="react-reveal singleProject" style="background-color: rgb(255, 118, 77);">
-                                    <div class="projectContent">
-                                        <h2 style="color: rgb(234, 234, 234);">Railway Tracking</h2>
-                                        <img src="{% static 'media/two.721a0672.svg' %}\" alt="Railway Tracking" />
-                                        <div class="project--showcaseBtn">
-                                            <a href="https://github.com/hhhrrrttt222111/developer-portfolio" target="_blank" rel="noreferrer" class="jss19">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="jss20" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                                                </svg>
-                                            </a>
-                                            <a href="https://github.com/hhhrrrttt222111/developer-portfolio" target="_blank" rel="noreferrer" class="jss19">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="jss20" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"
-                                                    ></path>
-                                                </svg>
-                                            </a>
-                                        </div>
+                                    <p class="project--desc" style="background: rgb(33, 33, 33); color: rgb(234, 234, 234);">{{ project.description }}</p>
+                                    <div class="project--lang" style="background: rgb(33, 33, 33); color: rgba(234, 234, 234, 0.8);">
+                                        {% for lang in project.languages|slice:":3" %}
+                                            <span>{{ lang }}</span>
+                                        {% endfor %}
                                     </div>
-                                    <p class="project--desc" style="background: rgb(33, 33, 33); color: rgb(234, 234, 234);">This project is a railway tracking system that allows users to obtain relevant information about train timing.</p>
-                                    <div class="project--lang" style="background: rgb(33, 33, 33); color: rgba(234, 234, 234, 0.8);"><span>Django</span><span>Tailwind CSS</span></div>
                                 </div>
-                                <div class="react-reveal singleProject" style="background-color: rgb(255, 118, 77);">
-                                    <div class="projectContent">
-                                        <h2 style="color: rgb(234, 234, 234);">Weather App</h2>
-                                        <img src="{% static 'media/three.d4f751d1.svg' %}\" alt="Weather App" />
-                                        <div class="project--showcaseBtn">
-                                            <a href="https://github.com/hhhrrrttt222111/developer-portfolio" target="_blank" rel="noreferrer" class="jss21">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="jss22" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                                                </svg>
-                                            </a>
-                                            <a href="https://github.com/hhhrrrttt222111/developer-portfolio" target="_blank" rel="noreferrer" class="jss21">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="jss22" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"
-                                                    ></path>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class="project--desc" style="background: rgb(33, 33, 33); color: rgb(234, 234, 234);">Weather forecast systems and applications predict weather conditions based on multiple parameters.</p>
-                                    <div class="project--lang" style="background: rgb(33, 33, 33); color: rgba(234, 234, 234, 0.8);"><span>Django</span><span>CSS</span><span>Material Ui</span></div>
-                                </div>
-                            </div>
-                            <div class="projects--viewAll">
-                                <a href="/projects">
-                                    <button class="jss15">
-                                        View All
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" class="jss16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                </a>
-                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="projects--viewAll">
+                            <a href="{{ view_all_url }}">
+                                <button class="jss15">
+                                    View All
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" class="jss16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                     </div>
-                    <div class="achievement" id="achievement" style="background-color: rgb(33, 33, 33);">
-                        <div class="achievement-body">
-                            <h1 style="color: rgb(245, 101, 57);">Achievements</h1>
-                            <h4 style="color: rgb(234, 234, 234);">
-                                Putting quantified achievements on a resume is great, but I just don’t work with hard numbers. I have no data to support the quality of my work. If you have lots of relevant experience, the heading statement
-                                of your resume will be a summary.
-                            </h4>
-                        </div>
-                        <div class="achievement-cards">
-                            <div class="react-reveal achievement-card jss23">
-                                <div class="achievecard-content">
-                                    <div class="achievecard-details1">
-                                        <h2 style="color: rgb(234, 234, 234);">Google Cloud certification</h2>
-                                        <p style="color: rgba(234, 234, 234, 0.8);">Google Cloud certifications validate your expertise and showcase your ability to transform businesses with Google Cloud technology.</p>
-                                    </div>
-                                    <div class="achievecard-details2" style="color: rgb(245, 101, 57);">
-                                        <h5>Aug 20, 2019</h5>
-                                        <div class="achievecard-field">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M880 298.4H521L403.7 186.2a8.15 8.15 0 0 0-5.5-2.2H144c-17.7 0-32 14.3-32 32v592c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V330.4c0-17.7-14.3-32-32-32zM840 768H184V256h188.5l119.6 114.4H840V768z"
-                                                ></path>
-                                            </svg>
-                                            <h5>Automation</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="achievecard-imgcontainer">
-                                    <img src="https://images.unsplash.com/photo-1573141597928-403fcee0e056?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=667&amp;q=80" alt="" />
-                                </div>
-                            </div>
-                            <div class="react-reveal achievement-card jss24">
-                                <div class="achievecard-content">
-                                    <div class="achievecard-details1">
-                                        <h2 style="color: rgb(234, 234, 234);">AWS Certification</h2>
-                                        <p style="color: rgba(234, 234, 234, 0.8);">Validate technical skills and cloud expertise to grow your career and business.</p>
-                                    </div>
-                                    <div class="achievecard-details2" style="color: rgb(245, 101, 57);">
-                                        <h5>Aug 20, 2019</h5>
-                                        <div class="achievecard-field">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M880 298.4H521L403.7 186.2a8.15 8.15 0 0 0-5.5-2.2H144c-17.7 0-32 14.3-32 32v592c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V330.4c0-17.7-14.3-32-32-32zM840 768H184V256h188.5l119.6 114.4H840V768z"
-                                                ></path>
-                                            </svg>
-                                            <h5>Automation</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="achievecard-imgcontainer">
-                                    <img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt="" />
-                                </div>
-                            </div>
-                            <div class="react-reveal achievement-card jss25">
-                                <div class="achievecard-content">
-                                    <div class="achievecard-details1">
-                                        <h2 style="color: rgb(234, 234, 234);">Professional Data Engineer Certification</h2>
-                                        <p style="color: rgba(234, 234, 234, 0.8);">Professional Data Engineers enable data-driven decision making by collecting, transforming, and publishing data.</p>
-                                    </div>
-                                    <div class="achievecard-details2" style="color: rgb(245, 101, 57);">
-                                        <h5>Aug 20, 2019</h5>
-                                        <div class="achievecard-field">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M880 298.4H521L403.7 186.2a8.15 8.15 0 0 0-5.5-2.2H144c-17.7 0-32 14.3-32 32v592c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V330.4c0-17.7-14.3-32-32-32zM840 768H184V256h188.5l119.6 114.4H840V768z"
-                                                ></path>
-                                            </svg>
-                                            <h5>Automation</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="achievecard-imgcontainer">
-                                    <img src="https://images.unsplash.com/photo-1489389944381-3471b5b30f04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
                     <div class="services" id="services" style="background-color: rgb(33, 33, 33);">
                         <div class="services-header"><h1 style="color: rgb(245, 101, 57);">Services</h1></div>
                         <div class="services-body">
@@ -600,232 +382,14 @@ If not, see <http://www.gnu.org/licenses/>.
                             </div>
                         </div>
                     </div>
-                    <div class="testimonials" style="background-color: rgb(245, 101, 57);">
-                        <div class="testimonials--header"><h1 style="color: rgb(33, 33, 33);">Testimonials</h1></div>
-                        <div class="testimonials--body">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="quote" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(33, 33, 33);">
-                                <path
-                                    d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
-                                ></path>
-                            </svg>
-                            <div class="testimonials--slider" style="background-color: rgb(245, 101, 57);">
-                                <div class="slick-slider slick-initialized" dir="ltr">
-                                    <div class="slick-list" style="height: 500px;">
-                                        <div class="slick-track" style="width: 11063px; opacity: 1; transform: translate3d(-851px, 0px, 0px);">
-                                            <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/boy3.a46b5f81.svg' %}\" alt="Ross Geller" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Be it 'Rocks' or 'Bones', you need a website to display it. This is it. Great work guys !</p>
-                                                                <h1>Ross Geller</h1>
-                                                                <h4>Paleontologist</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/boy2.ece5c080.svg' %}\" alt="Chandler Bing" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Building my own portfolio could've never been easier than this. The only areas I'm good at are Math, Jokes and Dance.</p>
-                                                                <h1>Chandler Bing</h1>
-                                                                <h4>Transponster</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/girl2.c1222fab.svg' %}\" alt="Monica Geller" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>This is the only thing that I didn't have to spend time to sort out. It's tidy all by itself.</p>
-                                                                <h1>Monica Geller</h1>
-                                                                <h4>Head Chef</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/girl1.7f9d8736.svg' %}\" alt="Phoebe Buffay" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Heard of the song 'Smelly Cat!!' ? This website made it viral. Plus portfolio is the only thing that Ursula doesn't have :)</p>
-                                                                <h1>Phoebe Buffay</h1>
-                                                                <h4>Massuese</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/boy1.f9c177c8.svg' %}\" alt="Joey Tribbiani" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Making my portfolio with this helped me get my role as 'Dr. Drake Ramoray' in 'Days Of Our Lives'. You guys are the best !</p>
-                                                                <h1>Joey Tribbiani</h1>
-                                                                <h4>Actor</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/girl3.46f7c62b.svg' %}\" alt="Rachel Green" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Ralph Lauren was one of the best things that ever happened to me. My portfolio made that dream happen. I owe you guys.</p>
-                                                                <h1>Rachel Green</h1>
-                                                                <h4>Sales Executive</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/boy3.a46b5f81.svg' %}\" alt="Ross Geller" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Be it 'Rocks' or 'Bones', you need a website to display it. This is it. Great work guys !</p>
-                                                                <h1>Ross Geller</h1>
-                                                                <h4>Paleontologist</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/boy2.ece5c080.svg' %}\" alt="Chandler Bing" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Building my own portfolio could've never been easier than this. The only areas I'm good at are Math, Jokes and Dance.</p>
-                                                                <h1>Chandler Bing</h1>
-                                                                <h4>Transponster</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/girl2.c1222fab.svg' %}\" alt="Monica Geller" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>This is the only thing that I didn't have to spend time to sort out. It's tidy all by itself.</p>
-                                                                <h1>Monica Geller</h1>
-                                                                <h4>Head Chef</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="8" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/girl1.7f9d8736.svg' %}\" alt="Phoebe Buffay" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Heard of the song 'Smelly Cat!!' ? This website made it viral. Plus portfolio is the only thing that Ursula doesn't have :)</p>
-                                                                <h1>Phoebe Buffay</h1>
-                                                                <h4>Massuese</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="9" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/boy1.f9c177c8.svg' %}\" alt="Joey Tribbiani" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Making my portfolio with this helped me get my role as 'Dr. Drake Ramoray' in 'Days Of Our Lives'. You guys are the best !</p>
-                                                                <h1>Joey Tribbiani</h1>
-                                                                <h4>Actor</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="10" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/girl3.46f7c62b.svg' %}\" alt="Rachel Green" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Ralph Lauren was one of the best things that ever happened to me. My portfolio made that dream happen. I owe you guys.</p>
-                                                                <h1>Rachel Green</h1>
-                                                                <h4>Sales Executive</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="11" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 851px;">
-                                                <div>
-                                                    <div class="single--testimony" tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="testimonials--container">
-                                                            <div class="review--img" style="background-color: rgb(33, 33, 33);"><img src="{% static 'media/boy3.a46b5f81.svg' %}\" alt="Ross Geller" /></div>
-                                                            <div class="review--content" style="background-color: rgb(33, 33, 33); color: rgb(234, 234, 234);">
-                                                                <p>Be it 'Rocks' or 'Bones', you need a website to display it. This is it. Great work guys !</p>
-                                                                <h1>Ross Geller</h1>
-                                                                <h4>Paleontologist</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="slick-dots" style="display: block;">
-                                        <li class="slick-active"><button>1</button></li>
-                                        <li class=""><button>2</button></li>
-                                        <li class=""><button>3</button></li>
-                                        <li class=""><button>4</button></li>
-                                        <li class=""><button>5</button></li>
-                                        <li class=""><button>6</button></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     {% include 'form.html' %}
                     <div class="footer" style="background-color: rgb(33, 33, 33);">
                         <p style="color: rgb(234, 234, 234);">Made with<span style="color: rgb(245, 101, 57); margin: 0px 0.5rem -1rem;">❤</span>by Jane Doe</p>
                     </div>
                 </div>
-                <div class="backToTop" style="display: none;">
-                    <button>
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="jss34" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M256 464c114.9 0 208-93.1 208-208S370.9 48 256 48 48 141.1 48 256s93.1 208 208 208zm0-244.5l-81.1 81.9c-7.5 7.5-19.8 7.5-27.3 0s-7.5-19.8 0-27.3l95.7-95.4c7.3-7.3 19.1-7.5 26.6-.6l94.3 94c3.8 3.8 5.7 8.7 5.7 13.7 0 4.9-1.9 9.9-5.6 13.6-7.5 7.5-19.7 7.6-27.3 0l-81-79.9z"
-                            ></path>
-                        </svg>
-                    </button>
-                </div>
             </div>
         </div>
-        {% include 'includejs.jshtml' %}
-        <script src="{% static 'js/2.8ed9d5f9.chunk.js' %}\"></script>
-        <script src="{% static 'js/main.25c2b842.chunk.js' %}\"></script>
+        {% include 'includejs.html' %}
+        <script src="{% static 'js/main.js' %}\"></script>
     </body>
 </html>
