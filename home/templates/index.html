@@ -15,49 +15,36 @@ See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with this program.
 If not, see <http://www.gnu.org/licenses/>.
 -->
+
 {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" href="{% static 'favicon.png' %}" />
+        <link rel="icon" href="https://github.com/BrunoRNS.png" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="description" content="Bruno RNS - Porfolio" />
-        <link rel="apple-touch-icon" href="{% static 'favicon.png' %}" />
+        <meta name="description" content="{{ user.name }} - Portfolio" />
+        <link rel="apple-touch-icon" href="https://github.com/BrunoRNS.png" />
         <link rel="manifest" href="{% static 'manifest.json' %}" />
-        <title>Bruno RNS - Porfolio</title>
-        <link href="{% static 'css/charset.css' %}\" rel="stylesheet" />
-        <link href="{% static 'css/main.css' %}\" rel="stylesheet" />
+        <title>{{ user.name }} - Portfolio</title>
+        <link href="{% static 'css/charset.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/main.css' %}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         {% include 'includecss.html' %}
     </head>
-    <body>
+    <body style="margin: 0px; padding: 0px;">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root">
             <div class="app">
                 <div>
                     <div class="landing">
-                        <div class="landing--container">
+                        <div class="landing--container" style="display: flex; width: 100%;">
                             <div class="landing--container-left" style="background-color: rgb(245, 101, 57);">
                                 <div class="lcl--content">
-                                    <a href="https://www.linkedin.com/in" target="_blank" rel="noreferrer">
-                                        <svg
-                                            stroke="currentColor"
-                                            fill="currentColor"
-                                            stroke-width="0"
-                                            viewBox="0 0 448 512"
-                                            class="landing--social"
-                                            height="1em"
-                                            width="1em"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            style="color: rgb(33, 33, 33);"
-                                        >
-                                            <path
-                                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                                            ></path>
-                                        </svg>
-                                    </a>
-                                    <a href="https://github.com/" target="_blank" rel="noreferrer">
+                                    <!-- GitHub -->
+                                    <a href="{{ user.social_links.github }}" target="_blank" rel="noreferrer">
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
@@ -74,12 +61,14 @@ If not, see <http://www.gnu.org/licenses/>.
                                             ></path>
                                         </svg>
                                     </a>
-                                    <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+                                    
+                                    <!-- Discord -->
+                                    <a href="{{ user.social_links.discord }}" target="_blank" rel="noreferrer">
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
                                             stroke-width="0"
-                                            viewBox="0 0 512 512"
+                                            viewBox="0 0 640 512"
                                             class="landing--social"
                                             height="1em"
                                             width="1em"
@@ -87,57 +76,21 @@ If not, see <http://www.gnu.org/licenses/>.
                                             style="color: rgb(33, 33, 33);"
                                         >
                                             <path
-                                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                                                d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,449.218a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,29.7,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
                                             ></path>
                                         </svg>
                                     </a>
-                                    <a href="https://youtube.com/" target="_blank" rel="noreferrer">
-                                        <svg
-                                            stroke="currentColor"
-                                            fill="currentColor"
-                                            stroke-width="0"
-                                            viewBox="0 0 576 512"
-                                            class="landing--social"
-                                            height="1em"
-                                            width="1em"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            style="color: rgb(33, 33, 33);"
-                                        >
-                                            <path
-                                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-                                            ></path>
-                                        </svg>
-                                    </a>
-                                    <a href="https://www.blogger.com/" target="_blank" rel="noreferrer">
-                                        <svg
-                                            stroke="currentColor"
-                                            fill="currentColor"
-                                            stroke-width="0"
-                                            viewBox="0 0 448 512"
-                                            class="landing--social"
-                                            height="1em"
-                                            width="1em"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            style="color: rgb(33, 33, 33);"
-                                        >
-                                            <path
-                                                d="M162.4 196c4.8-4.9 6.2-5.1 36.4-5.1 27.2 0 28.1.1 32.1 2.1 5.8 2.9 8.3 7 8.3 13.6 0 5.9-2.4 10-7.6 13.4-2.8 1.8-4.5 1.9-31.1 2.1-16.4.1-29.5-.2-31.5-.8-10.3-2.9-14.1-17.7-6.6-25.3zm61.4 94.5c-53.9 0-55.8.2-60.2 4.1-3.5 3.1-5.7 9.4-5.1 13.9.7 4.7 4.8 10.1 9.2 12 2.2 1 14.1 1.7 56.3 1.2l47.9-.6 9.2-1.5c9-5.1 10.5-17.4 3.1-24.4-5.3-4.7-5-4.7-60.4-4.7zm223.4 130.1c-3.5 28.4-23 50.4-51.1 57.5-7.2 1.8-9.7 1.9-172.9 1.8-157.8 0-165.9-.1-172-1.8-8.4-2.2-15.6-5.5-22.3-10-5.6-3.8-13.9-11.8-17-16.4-3.8-5.6-8.2-15.3-10-22C.1 423 0 420.3 0 256.3 0 93.2 0 89.7 1.8 82.6 8.1 57.9 27.7 39 53 33.4c7.3-1.6 332.1-1.9 340-.3 21.2 4.3 37.9 17.1 47.6 36.4 7.7 15.3 7-1.5 7.3 180.6.2 115.8 0 164.5-.7 170.5zm-85.4-185.2c-1.1-5-4.2-9.6-7.7-11.5-1.1-.6-8-1.3-15.5-1.7-12.4-.6-13.8-.8-17.8-3.1-6.2-3.6-7.9-7.6-8-18.3 0-20.4-8.5-39.4-25.3-56.5-12-12.2-25.3-20.5-40.6-25.1-3.6-1.1-11.8-1.5-39.2-1.8-42.9-.5-52.5.4-67.1 6.2-27 10.7-46.3 33.4-53.4 62.4-1.3 5.4-1.6 14.2-1.9 64.3-.4 62.8 0 72.1 4 84.5 9.7 30.7 37.1 53.4 64.6 58.4 9.2 1.7 122.2 2.1 133.7.5 20.1-2.7 35.9-10.8 50.7-25.9 10.7-10.9 17.4-22.8 21.8-38.5 3.2-10.9 2.9-88.4 1.7-93.9z"
-                                            ></path>
-                                        </svg>
-                                    </a>
+                                    
                                 </div>
                             </div>
-                            <img src="https://raw.githubusercontent.com/PhantomScript/asset-container/main/developer-portfolio/landingImg.png" alt="" class="landing--img" style="opacity: 1; border-color: rgb(33, 33, 33);" />
+                            <img src="{# PARA EDITAR!!!!!!!!!!!!!!!! #}" alt="" class="landing--img" style="opacity: 1; border-color: rgb(33, 33, 33);" />
                             <div class="landing--container-right" style="background-color: rgb(33, 33, 33);">
                                 <div class="lcr--content" style="color: rgb(234, 234, 234);">
-                                    <h6>Web Developer</h6>
-                                    <h1>Jane Doe</h1>
-                                    <p>
-                                        There wasn't a bird in the sky, but that was not what caught her attention. It was the clouds. The deep green that isn't the color of clouds, but came with these. She knew what was coming and she
-                                        hoped she was prepared.
-                                    </p>
+                                    <h6>{{ user.title }}</h6>
+                                    <h1>{{ user.name }}</h1>
+                                    <p>{{ user.bio }}</p>
                                     <div class="lcr-buttonContainer">
-                                        <a spy="true" duration="2000" href="/#contacts">
+                                        <a spy="true" duration="2000" href="#contacts">
                                             <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss8" tabindex="0" type="button"><span class="MuiButton-label">Contact</span><span class="MuiTouchRipple-root"></span></button>
                                         </a>
                                     </div>
@@ -154,14 +107,9 @@ If not, see <http://www.gnu.org/licenses/>.
                         <div class="about-body">
                             <div class="about-description">
                                 <h2 style="color: rgb(245, 101, 57);">Who I am</h2>
-                                <p style="color: rgba(234, 234, 234, 0.8);">
-                                    My name's Jane. I'm a web designer and developer based in Southampton, UK.<br />
-                                    <br />
-                                    During the day I work as a lead developer at a local agency and in the evening I work on freelance projects and utilize the time to built my own products. I spent my leisure hours writing articles and
-                                    poetry. Right now I'm also trying a hand at machine learning and AI. I love to learn and explore new arenas.
-                                </p>
+                                <p style="color: rgba(234, 234, 234, 0.8);">{{ user.about }}</p>
                             </div>
-                            <div class="about-img"><img src="{% static 'media/orangeTheme-girl.d0ad58be.svg' %}\" alt="" /></div>
+                            <div class="about-img"><img src="{% static 'media/orangeTheme-boy.svg' %}" alt="" /></div>
                         </div>
                     </div>
                     <div class="skills" style="background-color: rgb(33, 33, 33);">
@@ -173,7 +121,11 @@ If not, see <http://www.gnu.org/licenses/>.
                                         <div class="marquee" style="--play: running; --direction: normal; --duration: 20.8s; --delay: 0s; --iteration-count: infinite;">
                                             {% for skill in skills %}
                                                 <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                                    <img src="{% static 'media/' %}{{ skill.image }}" alt="{{ skill.name }}" />
+                                                    {% if skill.fontAwesomeClass %}
+                                                        <i class="{{ skill.fontAwesomeClass }}"></i>
+                                                    {% else %}
+                                                        <img src="{{ skill.image }}" alt="{{ skill.name }}" />
+                                                    {% endif %}
                                                     <h3 style="color: rgb(234, 234, 234);">{{ skill.name }}</h3>
                                                 </div>
                                             {% endfor %}
@@ -228,110 +180,14 @@ If not, see <http://www.gnu.org/licenses/>.
                             </div>
                         </div>
                     </div>
-                    <div class="services" id="services" style="background-color: rgb(33, 33, 33);">
-                        <div class="services-header"><h1 style="color: rgb(245, 101, 57);">Services</h1></div>
-                        <div class="services-body">
-                            <p style="color: rgba(234, 234, 234, 0.8);">These are some of the services I offer. Reach out to me if I can help you with any!</p>
-                            <div class="services-bodycontainer">
-                                <div class="react-reveal single-service" style="background-color: rgb(255, 118, 77);">
-                                    <div class="service-content" style="color: rgb(234, 234, 234);">
-                                        <i class="service-icon">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill="none" d="M16.589 9L15.003 7.414 5.906 16.511 5.377 18.625 7.491 18.097z"></path>
-                                                <path transform="rotate(134.999 18.003 6)" fill="none" d="M16.882 4.879H19.125V7.122H16.882z"></path>
-                                                <path
-                                                    d="M4.003,21c0.081,0,0.162-0.01,0.242-0.03l4-1c0.176-0.044,0.337-0.135,0.465-0.263L21.003,7.414 c0.378-0.378,0.586-0.88,0.586-1.414s-0.208-1.036-0.586-1.414L19.417,3c-0.756-0.756-2.072-0.756-2.828,0L4.296,15.293 c-0.128,0.128-0.219,0.289-0.263,0.464l-1,4c-0.086,0.341,0.015,0.701,0.263,0.95C3.485,20.897,3.741,21,4.003,21z M18.003,4.414 L19.589,6l-1.586,1.586L16.417,6L18.003,4.414z M5.906,16.511l9.097-9.097L16.589,9l-9.098,9.097l-2.114,0.528L5.906,16.511z"
-                                                ></path>
-                                            </svg>
-                                        </i>
-                                        <h4 style="color: rgb(234, 234, 234);">Content Writing</h4>
-                                    </div>
-                                </div>
-                                <div class="react-reveal single-service" style="background-color: rgb(255, 118, 77);">
-                                    <div class="service-content" style="color: rgb(234, 234, 234);">
-                                        <i class="service-icon">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 110.8V792H136V270.8l-27.6-21.5 39.3-50.5 42.8 33.3h643.1l42.8-33.3 39.3 50.5-27.7 21.5zM833.6 232L512 482 190.4 232l-42.8-33.3-39.3 50.5 27.6 21.5 341.6 265.6a55.99 55.99 0 0 0 68.7 0L888 270.8l27.6-21.5-39.3-50.5-42.7 33.2z"
-                                                ></path>
-                                            </svg>
-                                        </i>
-                                        <h4 style="color: rgb(234, 234, 234);">Email Marketing</h4>
-                                    </div>
-                                </div>
-                                <div class="react-reveal single-service" style="background-color: rgb(255, 118, 77);">
-                                    <div class="service-content" style="color: rgb(234, 234, 234);">
-                                        <i class="service-icon">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    d="M4.854 4.146a.5.5 0 010 .708L1.707 8l3.147 3.146a.5.5 0 01-.708.708l-3.5-3.5a.5.5 0 010-.708l3.5-3.5a.5.5 0 01.708 0zm6.292 0a.5.5 0 000 .708L14.293 8l-3.147 3.146a.5.5 0 00.708.708l3.5-3.5a.5.5 0 000-.708l-3.5-3.5a.5.5 0 00-.708 0zm-.999-3.124a.5.5 0 01.33.625l-4 13a.5.5 0 01-.955-.294l4-13a.5.5 0 01.625-.33z"
-                                                    clip-rule="evenodd"
-                                                ></path>
-                                            </svg>
-                                        </i>
-                                        <h4 style="color: rgb(234, 234, 234);">Web Design</h4>
-                                    </div>
-                                </div>
-                                <div class="react-reveal single-service" style="background-color: rgb(255, 118, 77);">
-                                    <div class="service-content" style="color: rgb(234, 234, 234);">
-                                        <i class="service-icon">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H48zm0 32h106c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H38c-3.3 0-6-2.7-6-6V80c0-8.8 7.2-16 16-16zm426 96H38c-3.3 0-6-2.7-6-6v-36c0-3.3 2.7-6 6-6h138l30.2-45.3c1.1-1.7 3-2.7 5-2.7H464c8.8 0 16 7.2 16 16v74c0 3.3-2.7 6-6 6zM256 424c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm0-208c-48.5 0-88 39.5-88 88s39.5 88 88 88 88-39.5 88-88-39.5-88-88-88zm-48 104c-8.8 0-16-7.2-16-16 0-35.3 28.7-64 64-64 8.8 0 16 7.2 16 16s-7.2 16-16 16c-17.6 0-32 14.4-32 32 0 8.8-7.2 16-16 16z"
-                                                ></path>
-                                            </svg>
-                                        </i>
-                                        <h4 style="color: rgb(234, 234, 234);">Photography</h4>
-                                    </div>
-                                </div>
-                                <div class="react-reveal single-service" style="background-color: rgb(255, 118, 77);">
-                                    <div class="service-content" style="color: rgb(234, 234, 234);">
-                                        <i class="service-icon">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z"
-                                                ></path>
-                                            </svg>
-                                        </i>
-                                        <h4 style="color: rgb(234, 234, 234);">Video Editing</h4>
-                                    </div>
-                                </div>
-                                <div class="react-reveal single-service" style="background-color: rgb(255, 118, 77);">
-                                    <div class="service-content" style="color: rgb(234, 234, 234);">
-                                        <i class="service-icon">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M400 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM224 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm176-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h328c6.6 0 12 5.4 12 12v312z"
-                                                ></path>
-                                            </svg>
-                                        </i>
-                                        <h4 style="color: rgb(234, 234, 234);">Ebook Writing</h4>
-                                    </div>
-                                </div>
-                                <div class="react-reveal single-service" style="background-color: rgb(255, 118, 77);">
-                                    <div class="service-content" style="color: rgb(234, 234, 234);">
-                                        <i class="service-icon">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M552 64H112c-20.858 0-38.643 13.377-45.248 32H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h496c13.255 0 24-10.745 24-24V88c0-13.255-10.745-24-24-24zM48 392V144h16v248c0 4.411-3.589 8-8 8s-8-3.589-8-8zm480 8H111.422c.374-2.614.578-5.283.578-8V112h416v288zM172 280h136c6.627 0 12-5.373 12-12v-96c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v96c0 6.627 5.373 12 12 12zm28-80h80v40h-80v-40zm-40 140v-24c0-6.627 5.373-12 12-12h136c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H172c-6.627 0-12-5.373-12-12zm192 0v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0-144v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0 72v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12z"
-                                                ></path>
-                                            </svg>
-                                        </i>
-                                        <h4 style="color: rgb(234, 234, 234);">Blog Posting</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     {% include 'form.html' %}
                     <div class="footer" style="background-color: rgb(33, 33, 33);">
-                        <p style="color: rgb(234, 234, 234);">Made with<span style="color: rgb(245, 101, 57); margin: 0px 0.5rem -1rem;">❤</span>by Bruno RNS</p>
+                        <p style="color: rgb(234, 234, 234);">Made with<span style="color: rgb(245, 101, 57); margin: 0px 0.5rem -1rem;">❤</span>by {{ user.name }}</p>
                     </div>
                 </div>
             </div>
         </div>
         {% include 'includejs.html' %}
-        <script src="{% static 'js/main.js' %}\"></script>
+        <script src="{% static 'js/main.js' %}"></script>
     </body>
 </html>

@@ -198,6 +198,8 @@ class InstallPackages(object):
 
             installed_packages = subprocess.check_output([sys.executable, '-m' ,'pip', 'freeze']).decode('utf-8')
 
+            installed_packages.replace('==', '>=')
+            
             if requirements_exists:
                 
                 with open(new_requirements_path, 'w', encoding='utf-8') as f:

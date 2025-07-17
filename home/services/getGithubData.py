@@ -41,7 +41,7 @@ class GetGithubData:
         self.auth: Auth.Token = Auth.Token(settings.GITHUB_TOKEN)
 
         self.access: Github = Github(auth=self.auth)
-        self.user = self.access.get_user()
+        self.user = self.access.get_user("BrunoRNS") # When copying remember to change the username!
 
     def get_repos_with_more_stars(self, count: int) -> List[Dict[str, str | List[str]]]:
         """
