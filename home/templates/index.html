@@ -169,123 +169,65 @@ If not, see <http://www.gnu.org/licenses/>.
                         <div class="skillsContainer">
                             <div class="skill--scroll">
                                 <div class="marquee-container" style="--pause-on-hover: paused; --pause-on-click: paused;">
-                                    <div class="marquee" style="--play: running; --direction: normal; --duration: 20.8s; --delay: 0s; --iteration-count: infinite;">
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/html.6a342d61.svg' %}\" alt="HTML" />
-                                            <h3 style="color: rgb(234, 234, 234);">HTML</h3>
+                                    {% for _ in '12' %}
+                                        <div class="marquee" style="--play: running; --direction: normal; --duration: 20.8s; --delay: 0s; --iteration-count: infinite;">
+                                            {% for skill in skills %}
+                                                <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
+                                                    <img src="{% static 'media/' %}{{ skill.image }}" alt="{{ skill.name }}" />
+                                                    <h3 style="color: rgb(234, 234, 234);">{{ skill.name }}</h3>
+                                                </div>
+                                            {% endfor %}
                                         </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/fastify.1b930a41.svg' %}\" alt="Fastify" />
-                                            <h3 style="color: rgb(234, 234, 234);">Fastify</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/blender.b96901d1.svg' %}\" alt="Blender" />
-                                            <h3 style="color: rgb(234, 234, 234);">Blender</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/figma.1cd44608.svg' %}\" alt="Figma" />
-                                            <h3 style="color: rgb(234, 234, 234);">Figma</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/javascript.e9360603.svg' %}\" alt="Javascript" />
-                                            <h3 style="color: rgb(234, 234, 234);">Javascript</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/css.43b6f4bd.svg' %}\" alt="CSS" />
-                                            <h3 style="color: rgb(234, 234, 234);">CSS</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/react.2b6a0717.svg' %}\" alt="React" />
-                                            <h3 style="color: rgb(234, 234, 234);">React</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/django.d51a8aa4.svg' %}\" alt="Django" />
-                                            <h3 style="color: rgb(234, 234, 234);">Django</h3>
-                                        </div>
-                                    </div>
-                                    <div class="marquee" style="--play: running; --direction: normal; --duration: 20.8s; --delay: 0s; --iteration-count: infinite;">
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/html.6a342d61.svg' %}\" alt="HTML" />
-                                            <h3 style="color: rgb(234, 234, 234);">HTML</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/fastify.1b930a41.svg' %}\" alt="Fastify" />
-                                            <h3 style="color: rgb(234, 234, 234);">Fastify</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/blender.b96901d1.svg' %}\" alt="Blender" />
-                                            <h3 style="color: rgb(234, 234, 234);">Blender</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/figma.1cd44608.svg' %}\" alt="Figma" />
-                                            <h3 style="color: rgb(234, 234, 234);">Figma</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/javascript.e9360603.svg' %}\" alt="Javascript" />
-                                            <h3 style="color: rgb(234, 234, 234);">Javascript</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/css.43b6f4bd.svg' %}\" alt="CSS" />
-                                            <h3 style="color: rgb(234, 234, 234);">CSS</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/react.2b6a0717.svg' %}\" alt="React" />
-                                            <h3 style="color: rgb(234, 234, 234);">React</h3>
-                                        </div>
-                                        <div class="skill--box" style="background-color: rgb(33, 33, 33); box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;">
-                                            <img src="{% static 'media/django.d51a8aa4.svg' %}\" alt="Django" />
-                                            <h3 style="color: rgb(234, 234, 234);">Django</h3>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="projects" id="projects" style="background-color: rgb(33, 33, 33);">
                         <div class="projects--header"><h1 style="color: rgb(245, 101, 57);">Projects</h1></div>
-                            <div class="projects--body">
-                                <div class="projects--bodyContainer">
+                        <div class="projects--body">
+                            <div class="projects--bodyContainer">
                                     {% for project in projects|slice:":3" %}
                                         <div class="react-reveal singleProject" style="background-color: rgb(255, 118, 77);">
-                                        <div class="projectContent">
-                                        <h2 style="color: rgb(234, 234, 234);">{{ project.title }}</h2>
-                                        <img src="{% static 'media/' %}{% cycle 'one.a3146128.svg' 'two.721a0672.svg' 'three.d4f751d1.svg' %}" alt="{{ project.title }}" />
-                                        <div class="project--showcaseBtn">
-                                            <a href="{{ project.demo_url }}" target="_blank" rel="noreferrer" class="jss{% cycle '17' '19' '21' %}">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="jss{% cycle '18' '20' '22' %}" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                                                </svg>
-                                            </a>
-                                            <a href="{{ project.github_url }}" target="_blank" rel="noreferrer" class="jss{% cycle '17' '19' '21' %}">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="jss{% cycle '18' '20' '22' %}" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"
-                                                    ></path>
-                                                </svg>
-                                            </a>
+                                            <div class="projectContent">
+                                                <h2 style="color: rgb(234, 234, 234);">{{ project.title }}</h2>
+                                                <img src="{% static 'media/' %}{% cycle 'one.a3146128.svg' 'two.721a0672.svg' 'three.d4f751d1.svg' %}" alt="{{ project.title }}" />
+                                                <div class="project--showcaseBtn">
+                                                    <a href="{{ project.demo_url }}" target="_blank" rel="noreferrer" class="jss{% cycle '17' '19' '21' %}">
+                                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="jss{% cycle '18' '20' '22' %}" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="{{ project.github_url }}" target="_blank" rel="noreferrer" class="jss{% cycle '17' '19' '21' %}">
+                                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="jss{% cycle '18' '20' '22' %}" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"
+                                                            ></path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <p class="project--desc" style="background: rgb(33, 33, 33); color: rgb(234, 234, 234);">{{ project.description }}</p>
+                                            <div class="project--lang" style="background: rgb(33, 33, 33); color: rgba(234, 234, 234, 0.8);">
+                                                {% for lang in project.languages|slice:":3" %}
+                                                    <span>{{ lang }}</span>
+                                                {% endfor %}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <p class="project--desc" style="background: rgb(33, 33, 33); color: rgb(234, 234, 234);">{{ project.description }}</p>
-                                    <div class="project--lang" style="background: rgb(33, 33, 33); color: rgba(234, 234, 234, 0.8);">
-                                        {% for lang in project.languages|slice:":3" %}
-                                            <span>{{ lang }}</span>
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        </div>
-                        <div class="projects--viewAll">
-                            <a href="{{ view_all_url }}">
-                                <button class="jss15">
-                                    View All
-                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" class="jss16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </button>
-                            </a>
+                                    {% endfor %}
+                            </div>
+                            <div class="projects--viewAll">
+                                    <a href="{{ view_all_url }}">
+                                        <button class="jss15">
+                                            View All
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" class="jss16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </a>
+                            </div>
                         </div>
                     </div>
-                </div>
                     <div class="services" id="services" style="background-color: rgb(33, 33, 33);">
                         <div class="services-header"><h1 style="color: rgb(245, 101, 57);">Services</h1></div>
                         <div class="services-body">
@@ -384,7 +326,7 @@ If not, see <http://www.gnu.org/licenses/>.
                     </div>
                     {% include 'form.html' %}
                     <div class="footer" style="background-color: rgb(33, 33, 33);">
-                        <p style="color: rgb(234, 234, 234);">Made with<span style="color: rgb(245, 101, 57); margin: 0px 0.5rem -1rem;">❤</span>by Jane Doe</p>
+                        <p style="color: rgb(234, 234, 234);">Made with<span style="color: rgb(245, 101, 57); margin: 0px 0.5rem -1rem;">❤</span>by Bruno RNS</p>
                     </div>
                 </div>
             </div>
