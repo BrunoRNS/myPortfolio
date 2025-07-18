@@ -23,13 +23,22 @@ If not, see <http://www.gnu.org/licenses/>.
       <h1 style="color: rgb(245, 101, 57);">Contacts</h1>
       <div class="contacts-body">
          <div class="contacts-form">
-            <form id="contactForm">
+            <form id="contactForm" method="POST">
                {% csrf_token %}
-               <div class="input-container"><label for="Name" class="jss30">Name</label><input placeholder="John Doe" type="text" name="Name" class="form-input jss28" value="" /></div>
-               <div class="input-container"><label for="Email" class="jss30">Email</label><input placeholder="John@doe.com" type="email" name="Email" class="form-input jss28" value="" /></div>
-               <div class="input-container"><label for="Message" class="jss30">Message</label><textarea placeholder="Type your message...." type="text" name="Message" class="form-message jss29"></textarea></div>
+               <div class="input-container">
+                  <label for="{{ form.name.id_for_label }}" class="jss30">{{ form.name.label }}</label>
+                  {{ form.name }}
+               </div>
+               <div class="input-container">
+                  <label for="{{ form.email.id_for_label }}" class="jss30">{{ form.email.label }}</label>
+                  {{ form.email }}
+               </div>
+               <div class="input-container">
+                  <label for="{{ form.message.id_for_label }}" class="jss30">{{ form.message.label }}</label>
+                  {{ form.message }}
+               </div>
                <div class="submit-btn">
-                  <button type="submit" class="jss33 submitBtn">
+                  <button type="submit" id="submitBtn" class="jss33">
                      <p>Send</p>
                      <div class="submit-icon">
                         <svg

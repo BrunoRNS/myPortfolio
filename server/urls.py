@@ -35,8 +35,9 @@ Including another URLconf
 # from django.contrib import admin
 
 from django.urls import path
-from home.views import home
+from home.views import home, notification
 
 urlpatterns = [
     path('', home.home, name="home"),
+    path('send/', notification.send_message, name="send"),
 ]

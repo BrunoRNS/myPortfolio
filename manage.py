@@ -50,6 +50,16 @@ if __name__ == '__main__':
 
     # Execute pre-code
     PreCodeExecution.add_licence_headers()
+    
+    content: str
+    
+    with open(BASE_DIR / 'requirements.txt', 'r', encoding='utf-8') as f:
+        
+        content = f.read()
+        
+    with open(BASE_DIR / 'requirements.txt', 'w', encoding='utf-8') as f:
+        
+        f.write(content.replace('==', '>='))
 
     # Main function to run the Django server
     main()

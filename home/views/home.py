@@ -15,11 +15,18 @@ You should have received a copy of the GNU General Public License along with thi
 If not, see <http://www.gnu.org/licenses/>.
 """
 
+from django_ratelimit.decorators import ratelimit
+
 from django.shortcuts import render
 from django.core.cache import cache
 
 from typing import Dict, List
 
+from ..forms.forms import ContactForm
+
+from django import forms
+
+@ratelimit(key='ip', rate='3/s', method='GET', block=True)
 def home(request):
     """
     The home view is responsible for rendering the home page. It will pass the
@@ -57,7 +64,8 @@ def home(request):
     """
     
     context: Dict[
-        str,    str | 
+        str,    str |
+                forms.Form |
                 Dict[str, str | Dict[str, str]] | 
                 List[Dict[str, str]] | 
                 List[Dict[str, str | List[str]]]
@@ -173,5 +181,7 @@ def home(request):
         cache.set(cache_key, projects, timeout=86400)
     
     context['projects'] = projects
+    
+    context['form'] = ContactForm()
     
     return render(request, 'index.html', context)

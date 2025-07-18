@@ -47,13 +47,15 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
 
+NOTIFICATION_TOKEN = os.environ['NOTIFICATION_TOKEN']
+
 DEBUG = os.environ['DEBUG'] == 'True'
 
 ALLOWED_HOSTS = []
 
 # Application definition
 
-MY_APPS = ["home"]
+MY_APPS = ["home", "django_ratelimit"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -106,6 +108,15 @@ DATABASES = {
     }
 }
 
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6380/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

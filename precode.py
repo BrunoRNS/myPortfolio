@@ -131,7 +131,7 @@ def _add_licence_header(file_path) -> None:
             f.write(HEADER_PY + "\n" + content)
             save_log(f'Header added to: {file_path}')
 
-        elif file_path.endswith(('.css', '.scss')) and HEADER_CSS_SCSS not in content:
+        elif file_path.endswith(('.css', '.scss', '.js')) and HEADER_CSS_SCSS not in content:
             f.seek(0, 0)
             f.write(HEADER_CSS_SCSS + "\n" + content)
             save_log(f'Header added to: {file_path}')
@@ -230,6 +230,11 @@ class InstallPackages(object):
         try:
             with open('requirements.txt', 'r', encoding='utf-8') as f:
                 packages = [line.strip() for line in f if line.strip()]
+                
+            packages = list(map(
+                lambda package: package.replace('==', '>='),
+                packages,
+            ))
             return packages
 
         except FileNotFoundError:
