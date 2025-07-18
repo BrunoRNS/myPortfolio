@@ -18,9 +18,50 @@ If not, see <http://www.gnu.org/licenses/>.
 from django.shortcuts import render
 from django.core.cache import cache
 
+from typing import Dict, List
+
 def home(request):
+    """
+    The home view is responsible for rendering the home page. It will pass the
+    context to the template which will render the page.
+
+    The context is a dictionary with the following keys:
+
+    - user: A dictionary containing the user's informations.
+    - skills: A list of dictionaries containing the user's skills.
+    - projects: A list of dictionaries containing the user's projects.
+    - view_all_url: A string with the url to view all projects.
+
+    The user dictionary has the following keys:
+
+    - name: A string with the user's name.
+    - title: A string with the user's title.
+    - bio: A string with the user's bio.
+    - about: A string with the user's about.
+    - social_links: A dictionary with the user's social links.
+
+    The skills dictionary has the following keys:
+
+    - name: A string with the skill's name.
+    - image: A string with the skill's image.
+
+    The projects dictionary has the following keys:
+
+    - title: A string with the project's title.
+    - description: A string with the project's description.
+    - github_url: A string with the project's github url.
+    - demo_url: A string with the project's demo url.
+    - languages: A list of strings with the project's languages.
+
+    The view_all_url is a string with the url to view all projects.
+    """
     
-    
+    context: Dict[
+        str,    str | 
+                Dict[str, str | Dict[str, str]] | 
+                List[Dict[str, str]] | 
+                List[Dict[str, str | List[str]]]
+    ]
     """
     EXAMPLE CONTEXT:
     context = {
@@ -100,8 +141,8 @@ def home(request):
                 {"name": "HTML", "image": "https://img.icons8.com/plasticine/100/html-5.png"},
                 {"name": "CSS", "image": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/240/external-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-logo-shadow-tal-revivo.png"},
                 {"name": "JS", "image": "https://img.icons8.com/fluency/48/javascript.png"},
-                {"name": "Python", "image": "https://icons8.com.br/icon/YX03OUiHE3rz/python"},
-                {"name": "Flask", "image": "https://img.icons8.com/color/48/flask.png"},
+                {"name": "Python", "image": "https://img.icons8.com/plasticine/400/python.png"},
+                {"name": "Flask", "image": "/static/media/Flask.png"},
                 {"name": "Java", "image": "https://img.icons8.com/3d-fluency/375/java-coffee-cup-logo.png"},
                 {"name": "Spring Boot", "image": "https://img.icons8.com/color/480/spring-logo.png"},
                 {"name": "SNES", "image": "/static/media/snes.png"},
