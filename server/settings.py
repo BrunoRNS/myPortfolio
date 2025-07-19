@@ -51,7 +51,7 @@ NOTIFICATION_TOKEN = os.environ['NOTIFICATION_TOKEN']
 
 DEBUG = os.environ['DEBUG'] == 'True'
 
-ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS'] or '*']
+ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS'] or '*', 'localhost']
 
 # Application definition
 
