@@ -38,7 +38,7 @@ def main():
 
 
 if __name__ == '__main__':
-
+    """
     # Delete old log file if it exists
     os.unlink(os.path.join(os.path.dirname(__file__), '.log')) if os.path.exists(os.path.join(os.path.dirname(__file__), '.log')) else None
 
@@ -60,6 +60,7 @@ if __name__ == '__main__':
     with open(BASE_DIR / 'requirements.txt', 'w', encoding='utf-8') as f:
         
         f.write(content.replace('==', '>='))
-
+    """
+    
     # Main function to run the Django server
     main()
