@@ -42,16 +42,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 load_dotenv(BASE_DIR / '.env')
+SECRET_KEY = os.getenv('SECRET_KEY', get_random_secret_key())
 
-SECRET_KEY = os.environ['SECRET_KEY'] or get_random_secret_key()
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 
-GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
+NOTIFICATION_TOKEN = os.getenv('NOTIFICATION_TOKEN')
 
-NOTIFICATION_TOKEN = os.environ['NOTIFICATION_TOKEN']
+DEBUG = os.getenv('DEBUG') == 'True'
 
-DEBUG = os.environ['DEBUG'] == 'True'
-
-ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS'] or '*', 'localhost']
+ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS', '*'), 'localhost']
 
 # Application definition
 
@@ -111,7 +110,7 @@ DATABASES = {
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.getenv("REDIS_URL"),
+        "LOCATION": os.getenv("REDIS_URL", "redis://127.0.0.1:6379/1"),
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
