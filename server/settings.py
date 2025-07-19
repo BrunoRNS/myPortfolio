@@ -41,27 +41,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-if not load_dotenv(BASE_DIR / '.env'):
-    
-    SECRET_KEY = get_random_secret_key()
+load_dotenv(BASE_DIR / '.env')
 
-    GITHUB_TOKEN = get_random_secret_key()
+SECRET_KEY = os.environ['SECRET_KEY'] or get_random_secret_key()
 
-    NOTIFICATION_TOKEN = get_random_secret_key()
+GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
 
-    DEBUG = True
+NOTIFICATION_TOKEN = os.environ['NOTIFICATION_TOKEN']
 
-else:
-    
-    SECRET_KEY = os.environ['SECRET_KEY']
+DEBUG = os.environ['DEBUG'] == 'True'
 
-    GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
-
-    NOTIFICATION_TOKEN = os.environ['NOTIFICATION_TOKEN']
-
-    DEBUG = os.environ['DEBUG'] == 'True'
-
-ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
+ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS'] or '*']
 
 # Application definition
 
