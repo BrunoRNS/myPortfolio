@@ -1,0 +1,64 @@
+# Ignore compiled binary files
+bin/
+
+# Ignore library files
+lib/
+
+# Ignore cache directory tag files
+CACHEDIR.TAG
+
+# Ignore Python virtual environment configuration file
+pyvenv.cfg
+
+# Ignore SQLite database file
+db.sqlite3
+
+# Ignore Python bytecode cache directories and files
+__pycache__/
+*.pyc
+
+# Ignore cython compiled files
+*.c
+*.cpp
+*.h
+*.pyd
+*.so
+dist/
+
+# Ignore Visual Studio Code workspace settings
+.vscode/
+
+# Ignore compressed files or directories
+compressed/
+
+# Ignore environment variable files
+.env
+
+# Additional common ignores
+
+# Log files
+*.log
+.log
+
+*.tmp          # Temporary files
+*.swp          # Swap files created by text editors
+
+# Virtual Environment Files
+venv/
+
+# Ignore cache files
+*.rdb
+*.rdb.*
+
+# Ignore temporary files
+.DS_Store
+Thumbs.db
+
+# Ignore github files
+.git/
+.github/
+README.text
+.env-example
+tests/
+docs/
+.gitignore
