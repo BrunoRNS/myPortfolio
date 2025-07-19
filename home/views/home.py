@@ -26,6 +26,8 @@ from ..forms.forms import ContactForm
 
 from django import forms
 
+import random
+
 @ratelimit(key='ip', rate='3/s', method='GET', block=True)
 def home(request):
     """
@@ -44,7 +46,6 @@ def home(request):
     - name: A string with the user's name.
     - title: A string with the user's title.
     - bio: A string with the user's bio.
-    - about: A string with the user's about.
     - social_links: A dictionary with the user's social links.
 
     The skills dictionary has the following keys:
@@ -77,7 +78,6 @@ def home(request):
         'name': "Bruno RNS",
         'title': "Web Developer",
         'bio': "There wasn't a bird in the sky, but that was not what caught her attention...",
-        'about': "My name's Bruno. I'm a web designer and developer based in São Paulo, BR. During the day I work as a lead developer...",
         'social_links': {
             'discord': "https://www.discord.com/",
             'github': "https://github.com/",
@@ -136,11 +136,10 @@ def home(request):
     context = {
         'user': {
             'name': "Bruno RNS",
-            'title': "Web Developer",
-            'bio': "There wasn't a bird in the sky, but that was not what caught her attention...",
-            'about': "My name's Bruno. I'm a web designer and developer based in São Paulo, BR. During the day I work as a lead developer...",
+            'title': "Software Developer",
+            'bio': "Software developer building open-source tools with algorithmic elegance.",
             'social_links': {
-                'discord': "https://www.discord.com/",
+                'discord': "https://www.discord.com/users/1353359440266526753",
                 'github': "https://github.com/BrunoRNS",
             }
         },
@@ -163,6 +162,21 @@ def home(request):
                 {"name": "Ubuntu", "image": "/static/media/ubuntu.png"},
                 {"name": "Julia", "image": "/static/media/julia.png"},
                 {"name": "Jupyter Notebooks", "image": "https://img.icons8.com/fluency/240/jupyter.png"},
+                {"name": "Docker", "image": "https://img.icons8.com/dusk/256/docker.png"},
+                {"name": "Git", "image": "https://img.icons8.com/color/240/git.png"},
+                {"name": "GitHub", "image": "https://img.icons8.com/glyph-neue/256/github.png"},
+                {"name": "VS Code", "image": "https://img.icons8.com/plasticine/400/visual-studio-code-2019.png"},
+                {"name": "Podman", "image": "/static/media/Podman.png"},
+                {"name": "VirtualBox", "image": "https://img.icons8.com/color/240/virtualbox.png"},
+                {"name": "Video editing", "image": "https://img.icons8.com/office/100/video-editing.png"},
+                {"name": "Audio editing", "image": "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/external-audio-editing-video-production-flaticons-lineal-color-flat-icons.png"},
+                {"name": "Audacity", "image": "https://img.icons8.com/fluency/240/audacity.png"},
+                {"name": "Music production", "image": "https://img.icons8.com/office/80/music.png"},
+                {"name": "Gunicorn", "image": "/static/media/gunicorn.png"},
+                {"name": "Sass/Scss", "image": "/static/media/Sass.png"},
+                {"name": "PyPy", "image": "/static/media/pypy.svg"},
+                {"name": "MySQL", "image": "https://img.icons8.com/fluency/240/mysql-logo.png" },
+                {"name": "PostgreSQL", "image": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/100/external-postgre-sql-a-free-and-open-source-relational-database-management-system-logo-color-tal-revivo.png" },
         ],
         'projects': [],
         'view_all_url': 'https://github.com/BrunoRNS?tab=repositories',
@@ -183,5 +197,7 @@ def home(request):
     context['projects'] = projects
     
     context['form'] = ContactForm()
+    
+    context['skills'] = random.sample(context['skills'], len(context['skills'])) # type: ignore
     
     return render(request, 'index.html', context)

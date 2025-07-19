@@ -45,3 +45,11 @@ compressed/
 
 # Virtual Environment Files
 venv/
+
+# Ignore cache files
+*.rdb
+*.rdb.*
+
+# Ignore temporary files
+.DS_Store
+Thumbs.db

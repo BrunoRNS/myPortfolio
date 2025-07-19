@@ -22,10 +22,10 @@ If not, see <http://www.gnu.org/licenses/>.
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" href="https://github.com/BrunoRNS.png" />
+        <link rel="icon" href="{% static 'favicon.png' %}" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="{{ user.name }} - Portfolio" />
-        <link rel="apple-touch-icon" href="https://github.com/BrunoRNS.png" />
+        <link rel="apple-touch-icon" href="{% static 'favicon.png' %}" />
         <link rel="manifest" href="{% static 'manifest.json' %}" />
         <title>{{ user.name }} - Portfolio</title>
         <link href="{% static 'css/charset.css' %}" rel="stylesheet" />
@@ -84,7 +84,7 @@ If not, see <http://www.gnu.org/licenses/>.
 
                                     <div class="bee-separator" style="width: 0.5em; height: 0.5em;"></div>
 
-                                    <a class="bee-img" href="https://beecrowd.com/" target="_blank" rel="noreferrer">
+                                    <a class="bee-img" href="https://judge.beecrowd.com/en/profile/738711" target="_blank" rel="noreferrer">
                                                  
                                         <img src="{% static 'media/beecrowd.ico' %}" style="width: 2.5em; height: 2.5em;" />
 
@@ -92,7 +92,7 @@ If not, see <http://www.gnu.org/licenses/>.
                                     
                                 </div>
                             </div>
-                            <img src="{# PARA EDITAR!!!!!!!!!!!!!!!! #}" alt="" class="landing--img" style="opacity: 1; border-color: rgb(33, 33, 33);" />
+                            <img src="{% static 'media/avatar.jpeg' %}" alt="My Photo" class="landing--img" style="opacity: 5; border-color: rgb(33, 33, 33);" />
                             <div class="landing--container-right" style="background-color: rgb(33, 33, 33);">
                                 <div class="lcr--content" style="color: rgb(234, 234, 234);">
                                     <h6>{{ user.title }}</h6>
@@ -116,9 +116,9 @@ If not, see <http://www.gnu.org/licenses/>.
                         <div class="about-body">
                             <div class="about-description">
                                 <h2 style="color: rgb(245, 101, 57);">Who I am</h2>
-                                <p style="color: rgba(234, 234, 234, 0.8);">{{ user.about }}</p>
+                                <p style="color: rgba(234, 234, 234, 0.8);">{% include 'about.html' %}</p>
                             </div>
-                            <div class="about-img"><img src="{% static 'media/orangeTheme-boy.svg' %}" alt="" /></div>
+                            <div class="about-img"><img src="{% static 'media/AbH3nfipwm345msaoi09.jpg' %}" alt="" /></div>
                         </div>
                     </div>
                     <div class="skills" style="background-color: rgb(33, 33, 33);">
