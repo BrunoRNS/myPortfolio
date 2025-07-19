@@ -61,7 +61,7 @@ else:
 
     DEBUG = os.environ['DEBUG'] == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
 
 # Application definition
 
@@ -121,11 +121,16 @@ DATABASES = {
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.getenv("REDIS_URL", "redis://localhost:6380/0"), # Using redis on port 6380
+        "LOCATION": os.getenv("REDIS_URL"),
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     }
+}
+
+OPTIONS = {
+    "SOCKET_CONNECT_TIMEOUT": 5,
+    "SOCKET_TIMEOUT": 5,
 }
 
 # Password validation
