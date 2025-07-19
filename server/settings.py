@@ -121,7 +121,7 @@ DATABASES = {
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6380/1", # Using redis on port 6380
+        "LOCATION": os.getenv("REDIS_URL", "redis://localhost:6380/0"), # Using redis on port 6380
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
