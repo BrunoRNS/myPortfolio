@@ -31,6 +31,8 @@ from dotenv import load_dotenv
 
 from pathlib import Path
 
+from django.core.management.utils import get_random_secret_key
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,15 +43,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 if not load_dotenv(BASE_DIR / '.env'):
     
-    raise Exception('Could not load .env file')
+    SECRET_KEY = get_random_secret_key()
 
-SECRET_KEY = os.environ['SECRET_KEY']
+    GITHUB_TOKEN = get_random_secret_key()
 
-GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
+    NOTIFICATION_TOKEN = get_random_secret_key()
 
-NOTIFICATION_TOKEN = os.environ['NOTIFICATION_TOKEN']
+    DEBUG = True
 
-DEBUG = os.environ['DEBUG'] == 'True'
+else:
+    
+    SECRET_KEY = os.environ['SECRET_KEY']
+
+    GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
+
+    NOTIFICATION_TOKEN = os.environ['NOTIFICATION_TOKEN']
+
+    DEBUG = os.environ['DEBUG'] == 'True'
 
 ALLOWED_HOSTS = []
 
