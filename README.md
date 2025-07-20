@@ -2,6 +2,8 @@
 
 This is the source code for my personal portfolio, built with Django. It showcases my skills, projects, and contact information, and features a contact form that sends notifications via GitHub issues for me.
 
+> It is based on [developer portfolio - of hhhrrrttt222111](https://github.com/hhhrrrttt222111/developer-portfolio). This repository gives a more complete template, it was made to run in node.js but I have adapted it to run in django context.
+
 ## Features
 
 - **Modern Django Web App**: Built with Django 5, using best practices for security and performance.
