@@ -57,7 +57,7 @@ Thumbs.db
 # Ignore github files
 .git/
 .github/
-README.txt
+README.md
 .env-example
 tests/
 docs/

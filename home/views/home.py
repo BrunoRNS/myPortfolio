@@ -24,11 +24,16 @@ from typing import Dict, List
 
 from ..forms.forms import ContactForm
 
+from django.views.decorators.cache import cache_page
+
 from django import forms
+
+
 
 import random
 
 @ratelimit(key='ip', rate='3/s', method='GET', block=True)
+@cache_page(60)
 def home(request):
     """
     The home view is responsible for rendering the home page. It will pass the

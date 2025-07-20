@@ -38,6 +38,8 @@ def main():
 
 
 if __name__ == '__main__':
+    
+    # Commented for production, uncomment for debugging
     """
     # Delete old log file if it exists
     os.unlink(os.path.join(os.path.dirname(__file__), '.log')) if os.path.exists(os.path.join(os.path.dirname(__file__), '.log')) else None
