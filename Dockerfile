@@ -32,9 +32,6 @@ RUN /opt/venv/bin/python manage.py collectstatic --noinput && \
 RUN rm /etc/nginx/sites-enabled/default
 COPY nginx.conf /etc/nginx/conf.d/app.conf
 
-RUN echo "events { worker_connections 1024; }" | tee -a /etc/nginx/nginx.conf && \
-    sed -i '/user /d' /etc/nginx/nginx.conf  # Remove a linha user para evitar warnings
-
 COPY entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 
