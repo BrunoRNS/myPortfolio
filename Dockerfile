@@ -12,7 +12,11 @@ RUN apt-get update && \
 
 RUN python -m venv $VIRTUAL_ENV
 
-RUN useradd --system --no-create-home appuser
+RUN groupadd -r nginxgroup && \
+    useradd -r -g nginxgroup -s /bin/false nginxuser
+
+RUN mkdir -p /run/nginx && \
+    chown -R nginxuser:nginxgroup /run/nginx /var/log/nginx /var/lib/nginx
 
 WORKDIR /app
 
@@ -28,13 +32,16 @@ RUN /opt/venv/bin/python manage.py collectstatic --noinput && \
 RUN rm /etc/nginx/sites-enabled/default
 COPY nginx.conf /etc/nginx/conf.d/app.conf
 
+RUN echo "events { worker_connections 1024; }" | tee -a /etc/nginx/nginx.conf && \
+    sed -i '/user /d' /etc/nginx/nginx.conf  # Remove a linha user para evitar warnings
+
 COPY entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 
-RUN chown -R appuser:appuser /app /var/log/nginx /var/lib/nginx
+RUN chown -R nginxuser:nginxgroup /app /run/nginx /var/log/nginx /var/lib/nginx
 
 EXPOSE 80
 
-USER appuser
+USER nginxuser
 
 ENTRYPOINT ["/app/entrypoint.sh"]
