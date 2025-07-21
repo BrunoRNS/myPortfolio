@@ -29,15 +29,15 @@ RUN /opt/venv/bin/python manage.py collectstatic --noinput && \
     find . -type f -name '*.env' -delete && \
     find . -type f -name '*.secret' -delete
 
-RUN rm /etc/nginx/sites-enabled/default
-COPY nginx.conf /etc/nginx/conf.d/app.conf
+RUN rm -f /etc/nginx/sites-enabled/default
+COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 
-RUN chown -R nginxuser:nginxgroup /app /run/nginx /var/log/nginx /var/lib/nginx
+RUN chown -R nginxuser:nginxgroup /app
 
-EXPOSE 80
+EXPOSE 8080
 
 USER nginxuser
 
