@@ -18,4 +18,11 @@ chown nginxuser:nginxgroup /run/nginx
 
 sleep 5
 
+unset SECRET_KEY
+unset GITHUB_TOKEN
+unset NOTIFICATION_TOKEN
+unset DEBUG
+unset ALLOWED_HOSTS
+unset REDIS_URL
+
 exec nginx -g "daemon off;"
