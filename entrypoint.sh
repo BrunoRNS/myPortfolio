@@ -13,7 +13,6 @@ chown nginxuser:nginxgroup /run/nginx
     --worker-class gthread \
     --threads 2 \
     --timeout 30 \
-    --access-logfile - \
     server.wsgi &
 
 sleep 5
