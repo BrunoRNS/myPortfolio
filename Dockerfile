@@ -33,7 +33,7 @@ RUN rm -f /etc/nginx/sites-enabled/default
 COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY entrypoint.sh /app/entrypoint.sh
-RUN chmod +x /app/entrypoint.sh
+RUN chmod 755 /app/entrypoint.sh
 
 RUN chown -R nginxuser:nginxgroup /app
 
