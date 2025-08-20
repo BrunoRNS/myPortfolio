@@ -36,6 +36,8 @@ COPY entrypoint.sh /app/entrypoint.sh
 RUN chmod 755 /app/entrypoint.sh && \
     chmod a-w /app/entrypoint.sh
 
+RUN curl ifconfig.me
+
 RUN chown -R nginxuser:nginxgroup /app
 
 EXPOSE 8080
