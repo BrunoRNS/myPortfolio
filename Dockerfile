@@ -7,7 +7,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ENV DEBUG=False
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends nginx python3-venv && \
+    apt-get install -y --no-install-recommends nginx python3-venv curl && \
     rm -rf /var/lib/apt/lists/*
 
 RUN python -m venv $VIRTUAL_ENV
