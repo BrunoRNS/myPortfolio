@@ -7,7 +7,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ENV DEBUG=False
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends nginx python3-venv curl && \
+    apt-get install -y --no-install-recommends nginx python3-venv && \
     rm -rf /var/lib/apt/lists/*
 
 RUN python -m venv $VIRTUAL_ENV
@@ -35,9 +35,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY entrypoint.sh /app/entrypoint.sh
 RUN chmod 755 /app/entrypoint.sh && \
     chmod a-w /app/entrypoint.sh
-
-RUN curl ifconfig.me
-
+    
 RUN chown -R nginxuser:nginxgroup /app
 
 EXPOSE 8080
