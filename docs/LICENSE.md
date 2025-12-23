@@ -1,6 +1,6 @@
 # GNU GENERAL PUBLIC LICENSE
 
-![Icon](./icon.png)
+![Icon](docs/icon.png)
 
 Version 3, 29 June 2007
 
