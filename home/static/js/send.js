@@ -59,7 +59,7 @@ document
         form.reset();
 
     } catch (err) {
-        alert('Unexpected error occurred, please send an issue to the github repository.');
+        alert(err || 'Unexpected error occurred, please send an issue to the github repository.');
     } finally {
         submitBtn.disabled = false;
     }
