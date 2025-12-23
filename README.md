@@ -22,7 +22,7 @@ You can visit my portfolio online at [My Portfolio](https://myportfolio-kn09.onr
 
 #### Prerequisites
 
-- Python 3.11 or 3.12
+- Python 3.11+
 - python3-virtualenv or python3-venv
 - Redis (for caching)
 - Docker (optional)
