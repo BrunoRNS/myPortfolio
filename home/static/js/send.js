@@ -71,3 +71,63 @@ document.addEventListener('DOMContentLoaded', function() {
     form.reset();
 });
 */
+
+(function securityLayer() {
+    const CONFIG = {
+        minClickInterval: 800,
+        minTimeOnPage: 3000,
+        elementCooldown: 5000
+    };
+
+    const loadedAt = Date.now();
+    let lastGlobalClick = 0;
+    const lastElementAction = new WeakMap();
+
+    document.addEventListener('click', function (e) {
+        const now = Date.now();
+
+        if (now - lastGlobalClick < CONFIG.minClickInterval) {
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+        }
+        lastGlobalClick = now;
+        const el = e.target.closest('button, a, input[type=submit]');
+        if (!el) return;
+
+        const last = lastElementAction.get(el) || 0;
+        if (now - last < CONFIG.elementCooldown) {
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+        }
+
+        lastElementAction.set(el, now);
+    }, true);
+
+    document.addEventListener('submit', function (e) {
+        const now = Date.now();
+        
+        if (now - loadedAt < CONFIG.minTimeOnPage) {
+            e.preventDefault();
+            return;
+        }
+
+        let honeypot = e.target.querySelector('input[name="_session"]');
+        if (!honeypot) {
+            honeypot = document.createElement('input');
+            honeypot.type = 'text';
+            honeypot.name = '_session';
+            honeypot.autocomplete = 'off';
+            honeypot.tabIndex = -1;
+            honeypot.style.display = 'none';
+            e.target.appendChild(honeypot);
+        }
+
+        if (honeypot.value) {
+            e.preventDefault();
+            return;
+        }
+    }, true);
+})();
+
