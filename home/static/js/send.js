@@ -20,47 +20,48 @@ If not, see <http://www.gnu.org/licenses/>.
  *
  * @param {Event} e The submit event
 */
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
+document
+.getElementById('contactForm')
+.addEventListener('submit', async function (e) {
     e.preventDefault();
-    
+
     const form = e.target;
     const submitBtn = document.getElementById('submitBtn');
     const formData = new FormData(form);
-    
+
     submitBtn.disabled = true;
-    
+
     try {
-
         const response = await fetch('/send/', {
-
             method: 'POST',
             body: formData,
-
+            credentials: 'same-origin',
             headers: {
-                'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value
+                'X-CSRFToken': form.querySelector(
+                    '[name=csrfmiddlewaretoken]'
+                ).value
             }
-
         });
-        
-        const data = await response.json();
-        
-        if (!response.ok) {
 
-            throw new Error(data.errors || 'Failed to send');
-
+        if (response.status === 403) {
+            throw new Error(
+                'Your request was blocked. Please refresh the page and try again.'
+            );
         }
-        
+
+        if (!response.ok) {
+            throw new Error(
+                'An internal error occurred. Please try again later.'
+            );
+        }
+
         alert('Message sent successfully!');
         form.reset();
 
-    } catch (error) {
-
-        alert('Error: ' + (error.message || 'Please try again later'));
-
+    } catch (err) {
+        alert('Unexpected error occurred, please send an issue to the github repository.');
     } finally {
-
         submitBtn.disabled = false;
-
     }
 });
 
