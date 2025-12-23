@@ -42,6 +42,7 @@ trio-websocket>=0.12.2
 typing_extensions>=4.13.2
 urllib3>=2.4.0
 urwid>=2.6.16
+uvicorn>=0.40
 wcwidth>=0.2.13
 websocket-client>=1.8.0
 wheel>=0.38.1
