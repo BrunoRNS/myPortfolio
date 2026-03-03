@@ -5,7 +5,9 @@ set -e
     server.asgi:application \
     --bind 127.0.0.1:8000 \
     --workers 2 \
-    --worker-class uvicorn.workers.UvicornWorker &
+    --worker-class uvicorn.workers.UvicornWorker \
+    --max-requests 1000 \
+    --max-requests-jitter 50 &
 
 echo "Waiting Gunicorn to start..."
 while ! nc -z 127.0.0.1 8000; do
