@@ -22,12 +22,15 @@ COPY --from=builder /opt/venv /opt/venv
 COPY . .
 RUN python manage.py collectstatic --noinput && \
     rm -f /etc/nginx/sites-enabled/default && \
-    chown -R nginxuser:nginxgroup /app
+    mkdir -p /var/lib/nginx/body /var/lib/nginx/proxy /var/log/nginx /run/nginx && \
+    chown -R nginxuser:nginxgroup /app /var/lib/nginx /var/log/nginx /run/nginx /etc/nginx
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY proxy_params /etc/nginx/proxy_params
 COPY entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
+
+RUN chown nginxuser:nginxgroup /etc/nginx/nginx.conf /etc/nginx/proxy_params
 
 EXPOSE 8080
 USER nginxuser
