@@ -1,3 +1,15 @@
+# Archived Portfolio
+
+> **This repository is archived and is no longer maintained.**
+
+This portfolio was originally built based on the excellent **developer-portfolio** template by **hhhrrrttt222111**, adapted by me to run in a Django environment instead of Node.js.
+
+The live website is no longer available, and some links, references, and project information in this repository are outdated. Rather than removing it, I decided to keep it archived as a record of my previous work and as an example of how I customized and extended the original template.
+
+Although this project is no longer maintained, it represents an important step in my learning journey and showcases part of my earlier frontend and Django work. My current portfolio is now the procedural-generated one developed for SerisLab.
+
+Thank you for stopping by!
+
 # Bruno RNS - Personal Portfolio
 
 This is the source code for my personal portfolio, built with Django. It showcases my skills, projects, and contact information, and features a contact form that sends notifications via GitHub issues for me.
